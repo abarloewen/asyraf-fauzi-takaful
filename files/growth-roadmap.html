@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hj. Asyraf Fauzi — Digital Growth Roadmap &amp; Recommendations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --obsidian:#09090b;--ink:#18181b;--graphite:#3f3f46;--steel:#71717a;--ash:#a1a1aa;
+  --fog:#ececee;--mist:#f4f4f5;--snow:#ffffff;--leaf:#1f9d57;--amber:#E0A53D;--blue:#2563eb;
+  --ff:"Plus Jakarta Sans",ui-sans-serif,system-ui,sans-serif;--r:28px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--ff);background:var(--mist);color:var(--ink);line-height:1.58;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 26px}
+h1,h2,h3,h4{font-weight:700;letter-spacing:-.012em;color:var(--obsidian);line-height:1.12}
+.muted{color:var(--steel)}
+.kicker{font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--steel)}
+.tag{display:inline-flex;align-items:center;gap:.35rem;font-size:.68rem;font-weight:700;border-radius:10px;padding:.25rem .55rem}
+.tag-leaf{background:rgba(31,157,87,.12);color:var(--leaf)}.tag-blue{background:rgba(37,99,235,.1);color:var(--blue)}
+.tag-amber{background:rgba(224,165,61,.14);color:#a9791e}.tag-dark{background:var(--fog);color:var(--graphite)}
+
+.cover{background:var(--obsidian);color:#fff;border-radius:0 0 var(--r) var(--r)}
+.cover .wrap{padding:clamp(2.6rem,5vw,4rem) 26px}
+.cover .badge{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.04em;border:1px solid #2a2a2e;border-radius:12px;padding:.35rem .7rem;color:var(--ash)}
+.cover h1{color:#fff;font-size:clamp(2.2rem,4.6vw,3.4rem);margin:1.1rem 0 .6rem}
+.cover h1 .soft{color:var(--ash);font-weight:300}
+.cover p{color:#c7c7cd;max-width:44rem}
+.cover .by{margin-top:1.4rem;font-size:.86rem;color:var(--ash)}
+
+.sec{padding:clamp(2.4rem,4vw,3.6rem) 0}
+.sec-h{display:flex;align-items:baseline;gap:1rem;margin-bottom:1.6rem;flex-wrap:wrap}
+.sec-h .n{font-size:.9rem;font-weight:700;color:var(--steel)}
+.sec-h h2{font-size:clamp(1.6rem,3vw,2.2rem)}
+.sec-h p{color:var(--steel);font-size:.96rem;flex-basis:100%;margin-top:.1rem}
+
+.recap{background:#fff;border-radius:var(--r);padding:1.8rem;display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.recap div{font-size:.9rem}.recap b{display:block;font-weight:700;margin-bottom:.15rem}
+.recap span{color:var(--steel);font-size:.84rem}
+
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.rec{background:#fff;border-radius:var(--r);padding:1.6rem;display:flex;flex-direction:column;gap:.5rem}
+.rec .top{display:flex;align-items:flex-start;justify-content:space-between;gap:.8rem}
+.rec .ic{width:44px;height:44px;border-radius:14px;background:var(--mist);display:grid;place-items:center;color:var(--obsidian);flex:none}
+.rec .ic svg{width:22px;height:22px}
+.rec h4{font-size:1.12rem}
+.rec p{color:var(--steel);font-size:.92rem;margin:0}
+.rec .meta{display:flex;gap:.4rem;flex-wrap:wrap;margin-top:.3rem}
+
+.panel{background:var(--obsidian);color:#fff;border-radius:var(--r);padding:clamp(1.8rem,3vw,2.6rem)}
+.panel h2{color:#fff;margin-bottom:.4rem}.panel .lead{color:var(--ash);margin-bottom:1.4rem;max-width:42rem}
+.wins{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.win{background:#121214;border:1px solid #232327;border-radius:20px;padding:1.3rem}
+.win .num{font-size:1.6rem;font-weight:800;color:var(--leaf)}
+.win h4{color:#fff;font-size:1.05rem;margin:.3rem 0}.win p{color:var(--ash);font-size:.86rem}
+
+.road{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.phase{background:#fff;border-radius:var(--r);padding:1.6rem;border-top:4px solid var(--leaf)}
+.phase:nth-child(2){border-top-color:var(--blue)}.phase:nth-child(3){border-top-color:var(--amber)}
+.phase .ph{font-size:.74rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--steel)}
+.phase h4{font-size:1.2rem;margin:.3rem 0 .2rem}.phase .wk{font-size:.8rem;color:var(--steel);margin-bottom:.8rem}
+.phase ul{list-style:none;display:grid;gap:.45rem}
+.phase li{font-size:.9rem;color:var(--graphite);padding-left:1.2rem;position:relative}
+.phase li::before{content:"";position:absolute;left:0;top:.5rem;width:7px;height:7px;border-radius:50%;background:currentColor;color:var(--steel)}
+
+.note{background:#fff;border-radius:var(--r);padding:1.6rem;border:1px dashed #d4d4d8}
+.note b{font-weight:700}
+
+footer{padding:2rem 0 2.4rem;text-align:center;color:var(--steel);font-size:.82rem}
+@media(max-width:760px){.grid,.recap,.wins,.road{grid-template-columns:1fr}.recap{gap:.8rem}}
+</style>
+  <script src="../gate.js"></script>
+</head>
+<body>
+
+<header class="cover">
+  <div class="wrap">
+    <span class="badge">PREPARED BY UMMAH COLLECTIVE</span>
+    <h1>Digital Growth Roadmap <span class="soft">&amp; recommendations</span></h1>
+    <p>A review of what's built for Hj. Asyraf Fauzi today, and the highest-impact website enhancements and supporting assets to turn his website into a consistent, automated source of qualified takaful leads across KL &amp; the East Coast.</p>
+    <div class="by">For: Hj. Asyraf Fauzi · Authorised Zurich Takaful Specialist, Gemilang Empire ZFN &nbsp;·&nbsp; June 2026</div>
+  </div>
+</header>
+
+<!-- WHERE YOU ARE -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-h"><span class="n">01</span><h2>Where you are today</h2><p>The foundation is built — a premium, credible presence. These are the assets already delivered.</p></div>
+    <div class="recap">
+      <div><b>5-language website</b><span>BM · EN · 中文 · Tamil · Arabic, with the chosen modern design direction.</span></div>
+      <div><b>Booking wizard</b><span>4-step consultation booking, styled to match.</span></div>
+      <div><b>Brand &amp; logo</b><span>Logo options + a refined heritage/monogram set.</span></div>
+      <div><b>Pitch deck</b><span>Bilingual client-meeting deck (being redesigned to match).</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- WEBSITE -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-h"><span class="n">02</span><h2>Website enhancements</h2><p>Turn the site from a brochure into a lead engine. Ordered roughly by impact-to-effort.</p></div>
+    <div class="grid">
+      <article class="rec"><div class="top"><div><h4>Interactive takaful calculators</h4></div><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 6h8M8 10h2M8 14h2M14 10h2v6h-2z"/></svg></div></div><p>“How much medical cover do you need?”, a hibah/legacy estimator, an education-savings goal, and a quick motor-takaful estimate. Highly shareable, and each one captures a lead.</p><div class="meta"><span class="tag tag-leaf">High impact</span><span class="tag tag-dark">Lead capture</span></div></article>
+
+      <article class="rec"><div class="top"><div><h4>WhatsApp AI assistant (24/7)</h4></div><div class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.06 24l1.68-6.16A11.87 11.87 0 0 1 .14 11.9C.14 5.34 5.5 0 12.08 0a11.82 11.82 0 0 1 8.42 3.49 11.79 11.79 0 0 1 3.48 8.42c0 6.56-5.36 11.9-11.94 11.9a12 12 0 0 1-5.72-1.46L.06 24z"/></svg></div></div><p>Upgrade his current auto-reply into an AI agent that greets, collects Nama / Umur / Lokasi, answers FAQs and books slots — even while he's with a client. A natural fit for WebuildAI.</p><div class="meta"><span class="tag tag-leaf">High impact</span><span class="tag tag-blue">Automation</span></div></article>
+
+      <article class="rec"><div class="top"><div><h4>Lead capture → CRM + auto-reply</h4></div><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 8l9 6 9-6"/><rect x="3" y="5" width="18" height="14" rx="2"/></svg></div></div><p>Wire the contact form &amp; booking wizard to email + WhatsApp + a simple CRM (Notion/Sheet/Supabase), with an instant branded auto-reply so no enquiry goes cold.</p><div class="meta"><span class="tag tag-leaf">Quick win</span></div></article>
+
+      <article class="rec"><div class="top"><div><h4>Real scheduling + reminders</h4></div><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M9 16l2 2 4-4"/></svg></div></div><p>Connect the wizard to live calendar availability (Cal.com / Google Calendar) with automatic email + WhatsApp reminders to cut no-shows.</p><div class="meta"><span class="tag tag-blue">Automation</span></div></article>
+
+      <article class="rec"><div class="top"><div><h4>Knowledge Hub / blog (BM + EN)</h4></div><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div></div><p>Evergreen explainers — “Takaful vs insurance”, “What is hibah?”, “Medical cost reality 2026” — to win Google searches and prove expertise. Can be AI-assisted and published on a schedule.</p><div class="meta"><span class="tag tag-amber">SEO / organic</span></div></article>
+
+      <article class="rec"><div class="top"><div><h4>Local SEO + Google Business Profile</h4></div><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></div></div><p>InsuranceAgent schema markup, an optimised Google Business Profile, and KL + East Coast local pages so he shows up when people search “takaful agent near me”.</p><div class="meta"><span class="tag tag-amber">SEO / organic</span></div></article>
+
+      <article class="rec"><div class="top"><div><h4>Gated resource centre</h4></div><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 15l2 2 4-4"/></svg></div></div><p>Download centre for the lead-magnet guides below — each download exchanges a name + email + phone, feeding the CRM.</p><div class="meta"><span class="tag tag-dark">Lead capture</span></div></article>
+
+      <article class="rec"><div class="top"><div><h4>Analytics, Pixel &amp; compliance pages</h4></div><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div></div><p>Google tag + Meta Pixel for conversion tracking (essential before running ads), plus PDPA/privacy &amp; terms pages and Zurich-aligned disclaimers.</p><div class="meta"><span class="tag tag-dark">Foundation</span></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- OTHER ASSETS -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-h"><span class="n">03</span><h2>Other assets to build for him</h2><p>Marketing, sales and brand collateral that work alongside the website.</p></div>
+    <div class="grid">
+      <article class="rec"><div class="top"><div><h4>Redesigned pitch deck + PDF</h4></div><span class="tag tag-leaf">Now</span></div><p>Rebuild the client-meeting deck in the chosen modern brand direction and export a polished PDF for sharing on WhatsApp and email.</p></article>
+      <article class="rec"><div class="top"><div><h4>Lead-magnet guides (PDF)</h4></div><span class="tag tag-dark">Lead capture</span></div><p>“The Malaysian Family Protection Guide”, “5 Takaful Mistakes to Avoid”, “Medical Cost Reality Check 2026” — gated, branded, value-first.</p></article>
+      <article class="rec"><div class="top"><div><h4>Product one-pagers (PDF)</h4></div><span class="tag tag-blue">Sales</span></div><p>A clean one-pager per pillar (Medical, Hibah, Investment, Motor) he can send instantly when a prospect asks about a specific need.</p></article>
+      <article class="rec"><div class="top"><div><h4>Social media kit + reels</h4></div><span class="tag tag-amber">Content</span></div><p>Branded IG/FB/TikTok templates and short-form video scripts (education + client stories) to build a steady inbound presence.</p></article>
+      <article class="rec"><div class="top"><div><h4>WhatsApp &amp; email nurture sequences</h4></div><span class="tag tag-blue">Automation</span></div><p>Welcome → educate → soft-CTA flows, plus festive (Raya), birthday and annual policy-review templates that keep him top-of-mind.</p></article>
+      <article class="rec"><div class="top"><div><h4>Digital business card / link-in-bio</h4></div><span class="tag tag-leaf">Quick win</span></div><p>A single tap-to-save card page with photo, contact, booking and WhatsApp — perfect for networking and his Instagram bio.</p></article>
+      <article class="rec"><div class="top"><div><h4>Referral programme kit</h4></div><span class="tag tag-dark">Growth</span></div><p>A “refer a friend” landing page + tracking — referrals are an agent's best channel, and this makes them effortless.</p></article>
+      <article class="rec"><div class="top"><div><h4>Mini brand guide + print stationery</h4></div><span class="tag tag-dark">Brand</span></div><p>Finalised logo, colours and type in a one-page guide, plus business cards and a branded email signature for consistency everywhere.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- QUICK WINS -->
+<section class="sec">
+  <div class="wrap">
+    <div class="panel">
+      <h2>Top 3 quick wins</h2>
+      <p class="lead">If we do nothing else first, these three give the fastest return on effort.</p>
+      <div class="wins">
+        <div class="win"><div class="num">01</div><h4>WhatsApp AI assistant</h4><p>Capture &amp; qualify every enquiry 24/7, even mid-meeting — his single biggest leak today.</p></div>
+        <div class="win"><div class="num">02</div><h4>Coverage calculators + lead magnets</h4><p>Give people a reason to share details — turning anonymous visitors into named, warm leads.</p></div>
+        <div class="win"><div class="num">03</div><h4>CRM + auto-reply + reminders</h4><p>Make sure no lead ever goes cold and no booking is forgotten.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-h"><span class="n">04</span><h2>Suggested roadmap</h2><p>A phased rollout so each step compounds the last.</p></div>
+    <div class="road">
+      <div class="phase"><span class="ph">Phase 1 · Launch</span><h4>Go live &amp; capture</h4><div class="wk">Weeks 1–2</div><ul><li>Launch chosen design + booking</li><li>Redesigned deck &amp; PDF</li><li>WhatsApp auto / AI assistant</li><li>CRM + auto-reply, analytics &amp; Pixel</li><li>Google Business Profile</li></ul></div>
+      <div class="phase"><span class="ph">Phase 2 · Engage</span><h4>Attract &amp; convert</h4><div class="wk">Weeks 3–6</div><ul><li>Coverage calculators</li><li>Lead-magnet guides + resource centre</li><li>Knowledge Hub / SEO content</li><li>Social kit + first reels</li><li>Digital business card</li></ul></div>
+      <div class="phase"><span class="ph">Phase 3 · Scale</span><h4>Automate &amp; grow</h4><div class="wk">Weeks 7+</div><ul><li>Meta / Google ads (Pixel-ready)</li><li>Email &amp; WhatsApp nurture flows</li><li>Referral programme</li><li>Review &amp; renewal automations</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="note"><b>A note on fit:</b> nearly all of the above are services Ummah Collective already delivers — branding, web, SEO, content, ads, and AI automation (via WebuildAI). That means one partner, one brand voice, and tools that talk to each other. We'd recommend confirming the launch direction first, then sequencing Phase 1 immediately.</div>
+  </div>
+</section>
+
+<footer>Prepared by Ummah Collective Sdn. Bhd. for Hj. Asyraf Fauzi · Gemilang Empire ZFN · June 2026</footer>
+</body>
+</html>

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hj. Asyraf Fauzi — Authorised Zurich Takaful Specialist</title>
+<meta name="description" content="Hj. Asyraf Fauzi — authorised Zurich Takaful specialist with 10+ years' experience. Medical, hibah, family, investment & motor takaful across KL and the East Coast of Malaysia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --obsidian:#09090b; --ink:#18181b; --graphite:#3f3f46; --steel:#71717a; --ash:#a1a1aa;
+  --pebble:#d4d4d8; --fog:#ececee; --mist:#f4f4f5; --snow:#ffffff; --leaf:#1f9d57; --amber:#E0A53D;
+  --ff:"Plus Jakarta Sans",ui-sans-serif,system-ui,sans-serif;
+  --btn-shadow:rgba(255,255,255,.5) 0 .5px 0 0 inset, rgba(117,123,133,.4) 0 9px 14px -5px inset, rgb(44,46,52) 0 0 0 1.5px, rgba(0,0,0,.14) 0 4px 6px 0;
+  --r:36px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--ff);background:var(--mist);color:var(--ink);line-height:1.56;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}a{text-decoration:none;color:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+section{position:relative}
+h1,h2,h3{font-weight:700;line-height:1.1;letter-spacing:-.012em;color:var(--obsidian)}
+.display{font-size:clamp(2.6rem,5.6vw,4.1rem);font-weight:700;line-height:1.06}
+.display .soft{color:var(--ash);font-weight:300}
+h2{font-size:clamp(2rem,4vw,3rem)}.h2soft{color:var(--ash);font-weight:300}
+.muted{color:var(--steel)}
+.pill{display:inline-flex;align-items:center;gap:.5rem;border-radius:36px;font-size:.95rem;font-weight:500;padding:.85rem 1.5rem;cursor:pointer;transition:.22s cubic-bezier(.175,.885,.32,1.275);border:0}
+.pill-dark{background:var(--obsidian);color:#fff;box-shadow:var(--btn-shadow)}.pill-dark:hover{transform:translateY(-2px)}
+.pill-light{background:#fff;color:var(--graphite);border:1px solid var(--graphite)}.pill-light:hover{transform:translateY(-2px)}
+.pill-wa{background:#25D366;color:#04210f}.pill-wa:hover{transform:translateY(-2px)}
+.pill svg{width:17px;height:17px}.btnrow{display:flex;gap:.7rem;flex-wrap:wrap;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:.4rem;border-radius:12px;padding:.34rem .65rem;font-size:.74rem;font-weight:600;background:var(--graphite);color:#fafafa}
+.badge-leaf{background:var(--leaf);color:#fff}.badge .d{width:6px;height:6px;border-radius:50%;background:currentColor}
+
+.announce{background:var(--obsidian);color:#fff;text-align:center;font-size:.84rem;padding:.55rem;border-radius:0 0 24px 24px;max-width:1200px;margin:0 auto}
+.announce a{color:var(--ash);text-decoration:underline;margin-left:.4rem}
+nav{position:sticky;top:0;z-index:50;background:rgba(244,244,245,.82);backdrop-filter:blur(14px);height:62px;display:flex;align-items:center;border-bottom:1px solid var(--fog)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;width:100%}
+.brand{display:flex;align-items:center;gap:.55rem}.brand .mk{width:40px;height:40px}
+.brand b{font-size:1.08rem;font-weight:700}.brand small{display:block;font-size:.58rem;letter-spacing:.18em;color:var(--steel);text-transform:uppercase}
+.navlinks{display:flex;gap:1.4rem;align-items:center}.navlinks a{font-size:.9rem;color:var(--steel);font-weight:500}.navlinks a:hover{color:var(--ink)}
+.lang-note{font-size:.7rem;color:var(--steel);background:#fff;border:1px solid var(--fog);border-radius:999px;padding:.28rem .6rem}
+@media(max-width:920px){.navlinks .nl{display:none}}
+
+/* hero */
+.hero{padding:clamp(2.4rem,4vw,3.6rem) 0}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:2.4rem;align-items:center}
+.hero .display{margin:1rem 0 1.2rem}
+.hero p{color:var(--steel);font-size:1.06rem;max-width:32em;margin-bottom:1.4rem}
+.heronums{display:flex;gap:2rem;margin-top:1.8rem;flex-wrap:wrap}
+.heronums b{font-size:2rem;font-weight:700;display:block;line-height:1}.heronums span{font-size:.8rem;color:var(--steel)}
+.imgcard{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:4/4.5;background:#fff}
+.imgcard>img{width:100%;height:100%;object-fit:cover;object-position:center 12%}
+.chipfloat{position:absolute;left:16px;bottom:16px;right:16px;display:flex;gap:.6rem;align-items:center;background:rgba(255,255,255,.86);backdrop-filter:blur(10px);border-radius:20px;padding:.8rem 1rem;box-shadow:0 8px 24px rgba(9,9,11,.12)}
+.chipfloat .ic{width:38px;height:38px;border-radius:12px;background:var(--mist);display:grid;place-items:center;color:var(--leaf);flex:none}
+.chipfloat .ic svg{width:20px;height:20px}
+.chipfloat b{font-size:.88rem;font-weight:700;display:block;line-height:1.1}.chipfloat span{font-size:.76rem;color:var(--steel)}
+
+.marquee{overflow:hidden;padding:.4rem 0 1.4rem;-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+.mtrack{display:flex;gap:1rem;width:max-content;animation:scroll 32s linear infinite}
+.mtrack span{background:#fff;border-radius:999px;padding:.6rem 1.2rem;font-size:.86rem;font-weight:600;color:var(--graphite);white-space:nowrap;border:1px solid var(--fog)}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+.band{padding:clamp(3.2rem,6vw,5rem) 0}
+.shead{text-align:center;max-width:42rem;margin:0 auto clamp(2rem,3vw,3rem)}
+.shead h2{margin-bottom:.5rem}.shead p{color:var(--steel)}
+
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem}
+.card{background:#fff;border-radius:var(--r);padding:1.9rem;transition:.3s cubic-bezier(.175,.885,.32,1.275)}
+.card:hover{transform:translateY(-5px)}
+.card .ic{width:52px;height:52px;border-radius:18px;background:var(--mist);display:grid;place-items:center;color:var(--obsidian);margin-bottom:1rem}
+.card .ic svg{width:26px;height:26px}
+.card h3{font-size:1.3rem;margin-bottom:.2rem}
+.card .pl{font-size:.78rem;color:var(--steel);font-weight:600;margin-bottom:.7rem}
+.card p{color:var(--steel);font-size:.95rem}
+.card ul{list-style:none;margin-top:.7rem}
+.card li{font-size:.88rem;color:var(--graphite);margin-bottom:.35rem;padding-left:1.3rem;position:relative}
+.card li::before{content:"";position:absolute;left:0;top:.5rem;width:7px;height:7px;border-radius:50%;background:var(--obsidian)}
+
+/* feature spotlight bands */
+.feature{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem;align-items:center}
+.feature+.feature{margin-top:1.4rem}
+.feature__img{border-radius:var(--r);overflow:hidden;aspect-ratio:4/3.3;background:#fff}
+.feature__img img{width:100%;height:100%;object-fit:cover}
+.feature--rev .feature__img{order:2}
+.feature__body .tag{display:inline-block;font-size:.74rem;font-weight:700;letter-spacing:.04em;color:var(--steel);margin-bottom:.5rem}
+.feature__body h3{font-size:clamp(1.6rem,2.6vw,2.1rem);margin-bottom:.5rem}
+.feature__body p{color:var(--steel);margin-bottom:1rem}
+.flist{list-style:none;display:grid;gap:.55rem;margin-bottom:1.2rem}
+.flist li{display:flex;gap:.6rem;align-items:flex-start;font-size:.95rem;color:var(--graphite)}
+.flist li svg{width:20px;height:20px;color:var(--leaf);flex:none;margin-top:.1rem}
+.bigstat{display:inline-flex;flex-direction:column;background:var(--mist);border-radius:24px;padding:1rem 1.4rem;margin-bottom:1.2rem}
+.bigstat b{font-size:1.9rem;font-weight:700;line-height:1}.bigstat span{font-size:.8rem;color:var(--steel)}
+.chips{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.2rem}
+
+/* dark problem panel */
+.panel{background:var(--obsidian);border-radius:var(--r);padding:clamp(2.2rem,4vw,3.4rem);color:#fff}
+.panel h2{color:#fff}.panel .sub{color:var(--ash);margin:.6rem 0 1.8rem;max-width:36rem}
+.prow{display:flex;align-items:center;gap:1rem;padding:1rem 0;border-bottom:1px solid #232327;font-size:1.1rem}
+.prow:last-child{border-bottom:0}
+.prow .c{width:30px;height:30px;border-radius:50%;background:var(--graphite);display:grid;place-items:center;flex:none;color:#fff}
+.prow .c svg{width:15px;height:15px}.prow .lead{color:var(--ash);font-weight:300}.prow b{font-weight:600}
+
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1.6rem;text-align:center}
+.stat b{font-size:clamp(2.4rem,4.5vw,3.2rem);font-weight:700;display:block;line-height:1;color:var(--obsidian)}
+.stat span{font-size:.86rem;color:var(--steel);margin-top:.4rem;display:block}
+
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.quote{background:#fff;border-radius:var(--r);padding:1.8rem}
+.quote .stars{color:var(--amber);letter-spacing:2px;margin-bottom:.6rem}
+.quote p{font-size:.98rem;color:var(--ink)}
+.quote .who{display:flex;align-items:center;gap:.7rem;margin-top:1.1rem}
+.quote .av{width:42px;height:42px;border-radius:50%;background:var(--obsidian);color:#fff;display:grid;place-items:center;font-weight:700}
+.quote .who b{font-size:.9rem;display:block;line-height:1.1}.quote .who span{font-size:.8rem;color:var(--steel)}
+
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem}
+.step{background:#fff;border-radius:28px;padding:1.6rem}
+.step .n{width:42px;height:42px;border-radius:14px;background:var(--obsidian);color:#fff;display:grid;place-items:center;font-weight:700;margin-bottom:.8rem}
+.step h3{font-size:1.15rem;margin-bottom:.3rem}.step p{font-size:.88rem;color:var(--steel)}
+
+.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:2rem;align-items:center}
+.about__img{border-radius:var(--r);overflow:hidden;aspect-ratio:4/3.6}
+.about__img img{width:100%;height:100%;object-fit:cover}
+.about h2{margin-bottom:.6rem}.about p{color:var(--steel);margin-bottom:1rem}
+.creds{display:flex;gap:.5rem;flex-wrap:wrap}
+
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem;align-items:stretch}
+.contact .info{background:#fff;border-radius:var(--r);padding:2rem;display:flex;flex-direction:column}
+.contact .info img{width:100%;height:150px;object-fit:cover;object-position:center 30%;border-radius:22px;margin-bottom:1.2rem}
+.cline{display:flex;justify-content:space-between;gap:1rem;padding:.85rem 0;border-bottom:1px solid var(--fog)}
+.cline:last-child{border-bottom:0}.cline b{font-weight:600}.cline span{color:var(--steel)}
+.ctacard{background:var(--obsidian);border-radius:var(--r);padding:2.4rem;text-align:center;color:#fff;display:flex;flex-direction:column;justify-content:center}
+.ctacard h3{color:#fff;font-size:1.8rem;margin-bottom:.4rem}.ctacard p{color:var(--ash);margin-bottom:1.3rem}
+.ctacard .pill-dark{background:#fff;color:var(--obsidian);box-shadow:none}
+
+footer{padding:2.4rem 0 1.6rem;font-size:.86rem;color:var(--steel)}
+footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+footer .disc{font-size:.74rem;color:#9a9aa2;margin-top:1rem;max-width:62rem;line-height:1.6}
+.fab{position:fixed;right:22px;bottom:22px;z-index:60;width:56px;height:56px;border-radius:999px;background:var(--obsidian);color:#fff;display:grid;place-items:center;box-shadow:var(--btn-shadow)}
+.fab svg{width:26px;height:26px}
+.reveal{opacity:0;transform:translateY(22px);transition:.7s cubic-bezier(.175,.885,.32,1.275)}.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}.mtrack{animation:none}}
+@media(max-width:920px){.hero .wrap,.feature,.about,.contact .wrap{grid-template-columns:1fr}.feature--rev .feature__img{order:0}.cards{grid-template-columns:1fr}.stats,.steps,.quotes{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.stats,.steps,.quotes{grid-template-columns:1fr}}
+</style>
+  <script src="gate.js"></script>
+</head>
+<body>
+
+<div class="announce">Authorised Zurich Takaful specialist · KL &amp; the East Coast <a href="booking-rounded.html">Book a free consultation →</a></div>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#"><svg class="mk" viewBox="0 0 40 40"><rect width="40" height="40" rx="12" fill="#09090b"/><path d="M13 27c0-7 3-10 7-11 4 1 7 4 7 11" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round"/><circle cx="20" cy="12.4" r="1.5" fill="#fff"/></svg><span><b>Hj. Asyraf Fauzi</b><small>Takaful Specialist</small></span></a>
+    <div class="navlinks">
+      <a class="nl" href="#services">Services</a><a class="nl" href="#why">Why takaful</a><a class="nl" href="#about">About</a><a class="nl" href="#contact">Contact</a>
+      <span class="lang-note nl">BM·EN·中文·தமிழ்·ع</span>
+      <a class="pill pill-dark" href="booking-rounded.html" style="padding:.5rem 1.1rem">Book now</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="badge badge-leaf"><span class="d"></span>100% Shariah-compliant · backed by Zurich</span>
+      <h1 class="display">Smart, halal <span class="soft">protection</span> for your family's future.</h1>
+      <p>I'm Hj. Asyraf Fauzi — an authorised Zurich Takaful specialist with 10+ years helping families and business owners across Kuala Lumpur and the East Coast choose the right Shariah-compliant cover, with honesty and care.</p>
+      <div class="btnrow">
+        <a class="pill pill-dark" href="booking-rounded.html">Book a free consultation</a>
+        <a class="pill pill-wa" href="https://wa.me/6089003244?text=Assalamualaikum%20Hj.%20Asyraf%2C%20I'd%20like%20to%20learn%20more%20about%20Zurich%20Takaful%20protection." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.06 24l1.68-6.16A11.87 11.87 0 0 1 .14 11.9C.14 5.34 5.5 0 12.08 0a11.82 11.82 0 0 1 8.42 3.49 11.79 11.79 0 0 1 3.48 8.42c0 6.56-5.36 11.9-11.94 11.9a12 12 0 0 1-5.72-1.46L.06 24z"/></svg>WhatsApp me</a>
+      </div>
+      <div class="heronums">
+        <div><b data-count="10" data-suffix="+">0</b><span>Years' experience</span></div>
+        <div><b data-count="2" data-suffix="×">0</b><span>Champion Producer '22 &amp; '23</span></div>
+        <div><b data-count="1" data-prefix="RM" data-suffix="M+">0</b><span>Agency volume 2021</span></div>
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="imgcard">
+        <img src="assets/img/asyraf-hero.jpg" alt="Hj. Asyraf Fauzi">
+        <div class="chipfloat">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span>
+          <span><b>Zurich Takaful</b><span>Authorised Agent · Gemilang Empire ZFN</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee">
+  <div class="mtrack">
+    <span>Backed by Zurich Takaful</span><span>Regulated by Bank Negara Malaysia</span><span>PIDM protected</span><span>10+ years experience</span><span>KL &amp; East Coast</span><span>Champion Producer ’22 &amp; ’23</span>
+    <span>Backed by Zurich Takaful</span><span>Regulated by Bank Negara Malaysia</span><span>PIDM protected</span><span>10+ years experience</span><span>KL &amp; East Coast</span><span>Champion Producer ’22 &amp; ’23</span>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="band" id="services">
+  <div class="wrap">
+    <div class="shead reveal"><h2>Coverage for <span class="h2soft">every chapter</span></h2><p>Shariah-compliant plans underwritten by Zurich Takaful Malaysia — chosen to fit your needs and budget.</p></div>
+    <div class="cards reveal">
+      <article class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2 5 4-10 2 5h6"/></svg></div><h3>Medical Takaful</h3><div class="pl">MediPro · MediAfya · Z-MedProtect · MediCash</div><p>Comprehensive hospital &amp; surgical cover, no lifetime limit.</p><ul><li>Up to RM2,000,000/year</li><li>Cashless panel admission</li><li>Renewable to age 80</li></ul></article>
+      <article class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg></div><h3>Hibah &amp; Family</h3><div class="pl">ProSecure · Al-Shams · Term 80</div><p>A clear, Shariah-compliant legacy for those you love.</p><ul><li>Hibah nomination</li><li>Death &amp; TPD cover</li><li>Critical illness</li></ul></article>
+      <article class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 6l-9.5 9.5-5-5L1 18"/><path d="M17 6h6v6"/></svg></div><h3>Savings &amp; Investment</h3><div class="pl">ProInvest · Mumtaz · Executive20</div><p>Grow long-term wealth while staying protected.</p><ul><li>Investment-linked</li><li>Education &amp; retirement</li><li>Shariah funds</li></ul></article>
+      <article class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14l-1.5-5a3 3 0 0 0-2.8-2H9.3a3 3 0 0 0-2.8 2L5 17z"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/></svg></div><h3>Accident &amp; Motor</h3><div class="pl">Personal Sentinel V3 Plus · Z-Driver</div><p>Everyday protection for you, family and vehicle.</p><ul><li>PA up to RM175k/car</li><li>Flood add-on &amp; courtesy car</li><li>Safe-driver discounts</li></ul></article>
+    </div>
+  </div>
+</section>
+
+<!-- MEDICAL SPOTLIGHT -->
+<section class="band" id="medical">
+  <div class="wrap">
+    <div class="feature reveal">
+      <div class="feature__img"><img src="https://images.unsplash.com/photo-1516841273335-e39b37888115?auto=format&fit=crop&w=1100&q=72" alt="Medical takaful"></div>
+      <div class="feature__body">
+        <span class="tag">FLAGSHIP — MEDICAL TAKAFUL</span>
+        <h3>Never choose between your health and your savings</h3>
+        <p>A single hospital stay can undo years of saving. With the right medical takaful, you're treated at top panel hospitals while your family's finances stay protected — fully within Islamic principles.</p>
+        <div class="bigstat"><b>RM2,000,000</b><span>annual limit · no lifetime cap</span></div>
+        <ul class="flist">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Cashless admission at panel hospitals</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Pre- &amp; post-hospitalisation, day-care, dialysis</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Guaranteed renewable up to age 80</li>
+        </ul>
+        <a class="pill pill-dark" href="https://wa.me/6089003244" target="_blank" rel="noopener">Ask about medical plans</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAMILY SPOTLIGHT -->
+<section class="band" id="family" style="padding-top:0">
+  <div class="wrap">
+    <div class="feature feature--rev reveal">
+      <div class="feature__img"><img src="https://images.unsplash.com/photo-1767617774446-5bb3ce40824d?auto=format&fit=crop&w=1100&q=72" alt="Family takaful & hibah"></div>
+      <div class="feature__body">
+        <span class="tag">LEGACY — HIBAH &amp; FAMILY TAKAFUL</span>
+        <h3>A gift of certainty for the people you love</h3>
+        <p>Make sure your family is cared for, exactly as you intend. Hibah lets you pass on your takaful benefit in a clear, Shariah-compliant way — no disputes, no delays, no doubt.</p>
+        <ul class="flist">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Shariah-compliant hibah nomination</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Death &amp; total permanent disability cover</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Education &amp; retirement savings options</li>
+        </ul>
+        <a class="pill pill-dark" href="booking-rounded.html">Plan my family's protection</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY (dark panel) -->
+<section class="band" id="why">
+  <div class="wrap">
+    <div class="panel reveal">
+      <h2>Why takaful, not conventional insurance</h2>
+      <p class="sub">Takaful replaces interest, uncertainty and speculation with mutual donation (tabarru') and shared responsibility — protection practised as an act of brotherhood.</p>
+      <div class="prow"><span class="c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/></svg></span><span><span class="lead">No </span><b>Riba</b><span class="lead"> — no interest in how the fund is managed or invested.</span></span></div>
+      <div class="prow"><span class="c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/></svg></span><span><span class="lead">No </span><b>Gharar</b><span class="lead"> — no hidden terms or excessive uncertainty.</span></span></div>
+      <div class="prow"><span class="c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/></svg></span><span><span class="lead">No </span><b>Maysir</b><span class="lead"> — no gambling or speculation with your protection.</span></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="band" id="track">
+  <div class="wrap">
+    <div class="shead reveal"><h2>A decade of <span class="h2soft">trusted advice</span></h2></div>
+    <div class="stats reveal">
+      <div class="stat"><b data-count="10" data-suffix="+">0</b><span>Years in takaful</span></div>
+      <div class="stat"><b data-count="1" data-prefix="RM" data-suffix="M+">0</b><span>Agency volume, 2021</span></div>
+      <div class="stat"><b data-count="2" data-suffix="×">0</b><span>Champion Producer</span></div>
+      <div class="stat"><b data-count="100" data-suffix="%">0</b><span>Shariah-compliant</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="band">
+  <div class="wrap">
+    <div class="shead reveal"><h2>Trusted by <span class="h2soft">families &amp; business owners</span></h2></div>
+    <div class="quotes reveal">
+      <div class="quote"><div class="stars">★★★★★</div><p>“Asyraf explained everything in plain language. For the first time I actually understand my medical cover.”</p><div class="who"><span class="av">F</span><span><b>Faridah A.</b><span>Kuantan, Pahang</span></span></div></div>
+      <div class="quote"><div class="stars">★★★★★</div><p>“He found a plan that protected my family and fit my budget — and the claim was handled fast and stress-free.”</p><div class="who"><span class="av">H</span><span><b>Hafiz R.</b><span>Kuala Lumpur</span></span></div></div>
+      <div class="quote"><div class="stars">★★★★★</div><p>“Professional, honest and always reachable on WhatsApp. I've referred my whole family to him.”</p><div class="who"><span class="av">N</span><span><b>Nurul I.</b><span>Kuala Terengganu</span></span></div></div>
+    </div>
+    <p class="muted" style="text-align:center;font-size:.82rem;margin-top:1.2rem">Illustrative client experiences — to be replaced with real, consented testimonials before launch.</p>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="band">
+  <div class="wrap">
+    <div class="shead reveal"><h2>Getting protected is <span class="h2soft">simple</span></h2></div>
+    <div class="steps reveal">
+      <div class="step"><div class="n">1</div><h3>Discovery</h3><p>We talk through your needs, family and budget.</p></div>
+      <div class="step"><div class="n">2</div><h3>Tailored plan</h3><p>One or two Shariah-compliant options that fit you.</p></div>
+      <div class="step"><div class="n">3</div><h3>Apply with ease</h3><p>Simple paperwork, fully guided.</p></div>
+      <div class="step"><div class="n">4</div><h3>Lifetime support</h3><p>Reviews, claims help and updates.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="band" id="about">
+  <div class="wrap about reveal">
+    <div class="about__img"><img src="assets/img/team-group.jpg" alt="Hj. Asyraf Fauzi & team"></div>
+    <div>
+      <span class="badge" style="margin-bottom:.8rem">Agency Director · Gemilang Empire ZFN</span>
+      <h2>Meet Hj. Asyraf Fauzi</h2>
+      <p>For over a decade I've helped Malaysian families and business owners protect their health, wealth and future through Shariah-compliant takaful. My approach is simple: listen first, explain clearly, and recommend only what genuinely fits your needs and budget. Honoured as Champion Personal Producer in 2022 and 2023, and crossed the RM1 million agency milestone in 2021.</p>
+      <div class="creds">
+        <span class="badge">Authorised Zurich Takaful agent</span>
+        <span class="badge">10+ years experience</span>
+        <span class="badge">KL &amp; East Coast</span>
+        <span class="badge">BM · EN · Arabic</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="band contact" id="contact">
+  <div class="wrap">
+    <div class="info reveal">
+      <img src="https://images.unsplash.com/photo-1577415124269-fc1140a69e91?auto=format&fit=crop&w=1000&q=72" alt="Meet your takaful advisor">
+      <h2 style="font-size:1.6rem;margin-bottom:.8rem">Let's talk</h2>
+      <div class="cline"><b>Call / WhatsApp</b><span>+60 89 003 244</span></div>
+      <div class="cline"><b>Email</b><span>maf.zurichtakaful@gmail.com</span></div>
+      <div class="cline"><b>Service area</b><span>KL &amp; East Coast</span></div>
+      <div class="cline"><b>Availability</b><span>Mon–Sat, 9am–9pm</span></div>
+    </div>
+    <div class="ctacard reveal">
+      <h3>Ready when you are</h3>
+      <p>Book a free, no-obligation consultation — in person across KL &amp; the East Coast, or online.</p>
+      <div class="btnrow" style="justify-content:center">
+        <a class="pill pill-dark" href="booking-rounded.html">Book a consultation</a>
+        <a class="pill pill-wa" href="https://wa.me/6089003244" target="_blank" rel="noopener">WhatsApp me</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap"><div>© 2026 Hj. Asyraf Fauzi · Gemilang Empire ZFN</div><div>Website by Ummah Collective</div></div>
+  <div class="wrap"><p class="disc">Hj. Asyraf Fauzi is an authorised takaful agent representing Zurich Takaful Malaysia Berhad. This website is for general information only and does not constitute a contract of takaful. All plans are subject to Zurich Takaful's terms, conditions and Shariah approval. Zurich Takaful Malaysia Berhad is regulated by Bank Negara Malaysia.</p></div>
+</footer>
+
+<a class="fab" href="https://wa.me/6089003244" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.06 24l1.68-6.16A11.87 11.87 0 0 1 .14 11.9C.14 5.34 5.5 0 12.08 0a11.82 11.82 0 0 1 8.42 3.49 11.79 11.79 0 0 1 3.48 8.42c0 6.56-5.36 11.9-11.94 11.9a12 12 0 0 1-5.72-1.46L.06 24zM6.6 20.13c1.7.99 3.32 1.58 5.47 1.58 5.45 0 9.9-4.43 9.9-9.88a9.82 9.82 0 0 0-9.88-9.88c-5.46 0-9.9 4.43-9.9 9.88a9.8 9.8 0 0 0 1.51 5.26l-.99 3.61 3.89-1.59z"/></svg></a>
+<script src="assets/js/anim.js"></script>
+</body>
+</html>

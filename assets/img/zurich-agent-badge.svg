@@ -1,0 +1,11 @@
+<svg width="232" height="64" viewBox="0 0 232 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Authorised Zurich Takaful Agent">
+  <rect x="0.5" y="0.5" width="231" height="63" rx="12" fill="#ffffff" stroke="#D7E2F2"/>
+  <!-- Stylised Z mark in circle (representational, not the official trademark) -->
+  <circle cx="34" cy="32" r="21" fill="#0A2A66"/>
+  <path d="M24 23h20l-13.5 18H44" stroke="#ffffff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <g>
+    <text x="66" y="26" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="700" letter-spacing="2" fill="#6B7A90">AUTHORISED</text>
+    <text x="66" y="42" font-family="Georgia, 'Times New Roman', serif" font-size="17" font-weight="700" fill="#0A2A66">Zurich Takaful</text>
+    <text x="66" y="55" font-family="Arial, Helvetica, sans-serif" font-size="9.5" font-weight="600" letter-spacing="1.5" fill="#1668C4">AGENT &#183; GEMILANG EMPIRE ZFN</text>
+  </g>
+</svg>

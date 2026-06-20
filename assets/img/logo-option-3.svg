@@ -1,0 +1,14 @@
+<svg width="360" height="76" viewBox="0 0 360 76" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Hj. Asyraf Fauzi — Hexagon">
+  <defs>
+    <linearGradient id="o3" x1="11" y1="7" x2="65" y2="69" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1668C4"/><stop offset="1" stop-color="#0A2A66"/>
+    </linearGradient>
+  </defs>
+  <!-- Hexagon mark -->
+  <path d="M38 7 65 22.5V53.5L38 69 11 53.5V22.5Z" fill="url(#o3)"/>
+  <path d="M38 15 58 26.5V49.5L38 61 18 49.5V26.5Z" fill="none" stroke="#fff" stroke-width="1" opacity="0.25"/>
+  <text x="38" y="46" text-anchor="middle" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="25" font-weight="800" letter-spacing="-1" fill="#fff">AF</text>
+  <!-- Wordmark -->
+  <text x="84" y="33" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="20" font-weight="800" letter-spacing="0.5" fill="#0A2A66">ASYRAF FAUZI</text>
+  <text x="85" y="53" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="600" letter-spacing="2.4" fill="#1668C4">ZURICH TAKAFUL SPECIALIST</text>
+</svg>
