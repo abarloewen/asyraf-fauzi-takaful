@@ -7,31 +7,46 @@
 <meta name="description" content="Free takaful estimators — medical cover, hibah/legacy, education savings and motor. Get a quick estimate, then talk it through with Hj. Asyraf Fauzi.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Noto+Kufi+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--obsidian:#09090b;--ink:#18181b;--graphite:#3f3f46;--steel:#71717a;--ash:#a1a1aa;--fog:#ececee;--mist:#f4f4f5;--snow:#fff;--leaf:#1f9d57;
+:root{--obsidian:#09090b;--ink:#18181b;--graphite:#3f3f46;--steel:#71717a;--ash:#a1a1aa;--fog:#ececee;--mist:#f4f4f5;--snow:#fff;--leaf:#1f9d57;--pebble:#d4d4d8;
 --ff:"Plus Jakarta Sans",ui-sans-serif,system-ui,sans-serif;
 --btn-shadow:rgba(255,255,255,.5) 0 .5px 0 0 inset, rgba(117,123,133,.4) 0 9px 14px -5px inset, rgb(44,46,52) 0 0 0 1.5px, rgba(0,0,0,.14) 0 4px 6px 0;--r:36px;}
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:var(--ff);background:var(--mist);color:var(--ink);line-height:1.56;-webkit-font-smoothing:antialiased}
+html[lang="ar"] body{font-family:"Noto Kufi Arabic",var(--ff)}
+html[dir="rtl"]{direction:rtl}
 a{text-decoration:none;color:inherit}
 .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
 h1,h2,h3{font-weight:700;letter-spacing:-.012em;color:var(--obsidian)}
 .muted{color:var(--steel)}
 .pill{display:inline-flex;align-items:center;gap:.5rem;border-radius:36px;font-size:.92rem;font-weight:500;padding:.75rem 1.3rem;cursor:pointer;border:0;transition:.22s cubic-bezier(.175,.885,.32,1.275)}
-.pill-dark{background:var(--obsidian);color:#fff;box-shadow:var(--btn-shadow)}.pill-dark:hover{transform:translateY(-2px)}
-.pill-wa{background:#25D366;color:#04210f}.pill-wa:hover{transform:translateY(-2px)}
+.pill-dark{background:var(--obsidian);color:#fff;box-shadow:var(--btn-shadow)}.pill-dark:hover{transform:translateY(-2px) scale(1.02)}
+.pill-wa{background:#25D366;color:#04210f}.pill-wa:hover{transform:translateY(-2px) scale(1.02)}
 .pill svg{width:16px;height:16px}
 nav{position:sticky;top:0;z-index:50;background:rgba(244,244,245,.82);backdrop-filter:blur(14px);height:62px;display:flex;align-items:center;border-bottom:1px solid var(--fog)}
 nav .wrap{display:flex;align-items:center;justify-content:space-between;max-width:1200px;width:100%}
 .brand{display:flex;align-items:center;gap:.55rem}.brand .mk{width:38px;height:38px}.brand b{font-size:1.04rem;font-weight:700}
+.navright{display:flex;align-items:center;gap:1rem}
 .back{font-size:.9rem;color:var(--steel);font-weight:500}.back:hover{color:var(--ink)}
-.head{text-align:center;padding:clamp(2.4rem,5vw,3.4rem) 0 1.6rem}
+.lang{position:relative}
+.lang__btn{display:flex;align-items:center;gap:.35rem;border:1px solid var(--fog);background:#fff;border-radius:999px;padding:.4rem .7rem;font-family:var(--ff);font-weight:600;font-size:.8rem;color:var(--obsidian);cursor:pointer;transition:.18s}
+.lang__btn:hover{border-color:var(--pebble)}.lang__btn svg{width:14px;height:14px;color:var(--steel)}
+.lang__btn .chev{transition:.2s}.lang.open .lang__btn .chev{transform:rotate(180deg)}
+.lang__menu{position:absolute;top:calc(100% + 8px);inset-inline-end:0;min-width:164px;background:#fff;border:1px solid var(--fog);border-radius:16px;box-shadow:0 14px 34px rgba(9,9,11,.16);padding:.35rem;list-style:none;margin:0;display:none;z-index:90}
+.lang.open .lang__menu{display:block}
+.lang__menu button{width:100%;text-align:start;background:transparent;border:0;cursor:pointer;padding:.55rem .7rem;border-radius:10px;font-family:var(--ff);font-weight:600;font-size:.9rem;color:var(--graphite);transition:.15s}
+.lang__menu button:hover{background:var(--mist)}.lang__menu button.on{background:var(--obsidian);color:#fff}
+.head{text-align:center;padding:clamp(2.4rem,5vw,3.4rem) 0 1.6rem;animation:fadeUp .6s both}
 .head .badge{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.04em;color:var(--steel);background:#fff;border:1px solid var(--fog);border-radius:12px;padding:.34rem .7rem;margin-bottom:1rem}
 .head h1{font-size:clamp(2rem,4vw,2.9rem);margin-bottom:.4rem}.head p{color:var(--steel)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;padding-bottom:2rem}
-.calc{background:#fff;border-radius:var(--r);padding:1.8rem}
-.calc .ic{width:50px;height:50px;border-radius:16px;background:var(--mist);display:grid;place-items:center;color:var(--obsidian);margin-bottom:.9rem}
+.calc{background:#fff;border-radius:var(--r);padding:1.8rem;animation:fadeUp .6s both;transition:transform .3s,box-shadow .3s}
+.calc:hover{transform:translateY(-4px);box-shadow:0 20px 46px rgba(9,9,11,.1)}
+.grid .calc:nth-child(2){animation-delay:.08s}.grid .calc:nth-child(3){animation-delay:.16s}.grid .calc:nth-child(4){animation-delay:.24s}
+.calc .ic{width:50px;height:50px;border-radius:16px;background:var(--mist);display:grid;place-items:center;color:var(--obsidian);margin-bottom:.9rem;transition:.3s}
+.calc:hover .ic{background:var(--obsidian);color:#fff}
 .calc .ic svg{width:25px;height:25px}
 .calc h3{font-size:1.25rem;margin-bottom:.2rem}.calc .d{color:var(--steel);font-size:.9rem;margin-bottom:1.1rem}
 .field{margin-bottom:.85rem}.field label{display:block;font-size:.82rem;font-weight:600;margin-bottom:.35rem}
@@ -39,7 +54,7 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;max-widt
 .field input:focus,.field select:focus{outline:0;border-color:var(--obsidian)}
 .row{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
 .result{margin-top:1.1rem;background:var(--mist);border-radius:20px;padding:1.1rem 1.3rem;display:none}
-.result.on{display:block;animation:fade .35s ease}@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.result.on{display:block;animation:fade .4s ease}@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 .result .big{font-size:1.8rem;font-weight:800;line-height:1.1;color:var(--obsidian)}
 .result .lbl{font-size:.8rem;color:var(--steel)}
 .result .sub{font-size:.84rem;color:var(--graphite);margin-top:.5rem}
@@ -49,17 +64,30 @@ footer{padding:2rem 0 2.4rem;text-align:center;color:var(--steel);font-size:.8re
 @media(max-width:760px){.grid{grid-template-columns:1fr}}
 </style>
   <script src="gate.js"></script>
+  <script src="assets/js/i18n.js"></script>
 </head>
 <body>
 <nav><div class="wrap">
   <a class="brand" href="index.html"><svg class="mk" viewBox="0 0 38 38"><rect width="38" height="38" rx="11" fill="#09090b"/><path d="M12 26c0-7 3-10 7-11 4 1 7 4 7 11" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/><circle cx="19" cy="11.5" r="1.4" fill="#fff"/></svg><b>Hj. Asyraf Fauzi</b></a>
-  <a class="back" href="index.html">← Back to site</a>
+  <div class="navright">
+    <div class="lang">
+      <button type="button" class="lang__btn" aria-haspopup="listbox"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20"/></svg><span class="lang__cur">EN</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
+      <ul class="lang__menu" role="listbox">
+        <li><button data-lang="en">English</button></li>
+        <li><button data-lang="bm">Bahasa Melayu</button></li>
+        <li><button data-lang="zh">中文 (Mandarin)</button></li>
+        <li><button data-lang="ta">தமிழ் (Tamil)</button></li>
+        <li><button data-lang="ar">العربية</button></li>
+      </ul>
+    </div>
+    <a class="back" href="index.html"><span aria-hidden="true">←</span> <span data-i18n="nav.back">Back to site</span></a>
+  </div>
 </div></nav>
 
 <div class="head">
-  <span class="badge">FREE ESTIMATORS</span>
-  <h1>Takaful calculators</h1>
-  <p class="muted">Get a quick estimate in seconds — then talk it through with me for a precise, Shariah-compliant plan.</p>
+  <span class="badge" data-i18n="cal.badge">FREE ESTIMATORS</span>
+  <h1 data-i18n="cal.h1">Takaful calculators</h1>
+  <p class="muted" data-i18n="cal.sub">Get a quick estimate in seconds — then talk it through with me for a precise, Shariah-compliant plan.</p>
 </div>
 
 <div class="wrap"><div class="grid">
@@ -67,104 +95,109 @@ footer{padding:2rem 0 2.4rem;text-align:center;color:var(--steel);font-size:.8re
   <!-- MEDICAL -->
   <div class="calc">
     <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2 5 4-10 2 5h6"/></svg></div>
-    <h3>Medical cover estimator</h3>
-    <p class="d">How much annual medical takaful makes sense for you.</p>
+    <h3 data-i18n="cal.m.h">Medical cover estimator</h3>
+    <p class="d" data-i18n="cal.m.d">How much annual medical takaful makes sense for you.</p>
     <div class="row">
-      <div class="field"><label>Your age</label><input type="number" id="m-age" placeholder="e.g. 34" min="0" max="80"></div>
-      <div class="field"><label>Hospital preference</label><select id="m-hosp"><option value="1">Government / mixed</option><option value="1.3" selected>Private hospital</option><option value="1.6">Premium private</option></select></div>
+      <div class="field"><label data-i18n="cal.m.age">Your age</label><input type="number" id="m-age" data-i18n-ph="cal.m.agePh" placeholder="e.g. 34" min="0" max="80"></div>
+      <div class="field"><label data-i18n="cal.m.hosp">Hospital preference</label><select id="m-hosp"><option value="1" data-i18n="cal.m.hosp1">Government / mixed</option><option value="1.3" selected data-i18n="cal.m.hosp2">Private hospital</option><option value="1.6" data-i18n="cal.m.hosp3">Premium private</option></select></div>
     </div>
-    <div class="field"><label>Covering family too?</label><select id="m-fam"><option value="1">Just me</option><option value="1.15" selected>Me + family</option></select></div>
-    <button class="pill pill-dark" style="width:100%;justify-content:center" onclick="calcMed()">Estimate my cover</button>
+    <div class="field"><label data-i18n="cal.m.fam">Covering family too?</label><select id="m-fam"><option value="1" data-i18n="cal.m.fam1">Just me</option><option value="1.15" selected data-i18n="cal.m.fam2">Me + family</option></select></div>
+    <button class="pill pill-dark" style="width:100%;justify-content:center" onclick="calcMed()" data-i18n="cal.m.btn">Estimate my cover</button>
     <div class="result" id="m-res"></div>
   </div>
 
   <!-- HIBAH / INCOME REPLACEMENT -->
   <div class="calc">
     <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg></div>
-    <h3>Family protection (hibah)</h3>
-    <p class="d">The lump sum your family would need if something happened to you.</p>
+    <h3 data-i18n="cal.h.h">Family protection (hibah)</h3>
+    <p class="d" data-i18n="cal.h.d">The lump sum your family would need if something happened to you.</p>
     <div class="row">
-      <div class="field"><label>Monthly expenses (RM)</label><input type="number" id="h-exp" placeholder="e.g. 4000"></div>
-      <div class="field"><label>Years to support</label><input type="number" id="h-yrs" placeholder="e.g. 10" value="10"></div>
+      <div class="field"><label data-i18n="cal.h.exp">Monthly expenses (RM)</label><input type="number" id="h-exp" data-i18n-ph="cal.h.expPh" placeholder="e.g. 4000"></div>
+      <div class="field"><label data-i18n="cal.h.yrs">Years to support</label><input type="number" id="h-yrs" data-i18n-ph="cal.h.yrsPh" placeholder="e.g. 10" value="10"></div>
     </div>
-    <div class="field"><label>Outstanding debts (RM)</label><input type="number" id="h-debt" placeholder="e.g. 250000"></div>
-    <button class="pill pill-dark" style="width:100%;justify-content:center" onclick="calcHibah()">Estimate cover needed</button>
+    <div class="field"><label data-i18n="cal.h.debt">Outstanding debts (RM)</label><input type="number" id="h-debt" data-i18n-ph="cal.h.debtPh" placeholder="e.g. 250000"></div>
+    <button class="pill pill-dark" style="width:100%;justify-content:center" onclick="calcHibah()" data-i18n="cal.h.btn">Estimate cover needed</button>
     <div class="result" id="h-res"></div>
   </div>
 
   <!-- EDUCATION -->
   <div class="calc">
     <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1 3 2 6 2s6-1 6-2v-5"/></svg></div>
-    <h3>Education savings goal</h3>
-    <p class="d">What to set aside each month for your child's studies.</p>
+    <h3 data-i18n="cal.e.h">Education savings goal</h3>
+    <p class="d" data-i18n="cal.e.d">What to set aside each month for your child's studies.</p>
     <div class="row">
-      <div class="field"><label>Child's age now</label><input type="number" id="e-age" placeholder="e.g. 5" min="0" max="17"></div>
-      <div class="field"><label>Starts study at</label><input type="number" id="e-start" placeholder="18" value="18"></div>
+      <div class="field"><label data-i18n="cal.e.age">Child's age now</label><input type="number" id="e-age" data-i18n-ph="cal.e.agePh" placeholder="e.g. 5" min="0" max="17"></div>
+      <div class="field"><label data-i18n="cal.e.start">Starts study at</label><input type="number" id="e-start" placeholder="18" value="18"></div>
     </div>
-    <div class="field"><label>Cost in today's money (RM)</label><input type="number" id="e-cost" placeholder="e.g. 150000" value="150000"></div>
-    <button class="pill pill-dark" style="width:100%;justify-content:center" onclick="calcEdu()">Estimate monthly savings</button>
+    <div class="field"><label data-i18n="cal.e.cost">Cost in today's money (RM)</label><input type="number" id="e-cost" data-i18n-ph="cal.e.costPh" placeholder="e.g. 150000" value="150000"></div>
+    <button class="pill pill-dark" style="width:100%;justify-content:center" onclick="calcEdu()" data-i18n="cal.e.btn">Estimate monthly savings</button>
     <div class="result" id="e-res"></div>
   </div>
 
   <!-- MOTOR -->
   <div class="calc">
     <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14l-1.5-5a3 3 0 0 0-2.8-2H9.3a3 3 0 0 0-2.8 2L5 17z"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/></svg></div>
-    <h3>Motor takaful estimate</h3>
-    <p class="d">A rough comprehensive contribution for your vehicle.</p>
+    <h3 data-i18n="cal.c.h">Motor takaful estimate</h3>
+    <p class="d" data-i18n="cal.c.d">A rough comprehensive contribution for your vehicle.</p>
     <div class="row">
-      <div class="field"><label>Car market value (RM)</label><input type="number" id="c-val" placeholder="e.g. 60000"></div>
-      <div class="field"><label>Region</label><select id="c-reg"><option value="1" selected>Peninsular Malaysia</option><option value="0.85">East Malaysia</option></select></div>
+      <div class="field"><label data-i18n="cal.c.val">Car market value (RM)</label><input type="number" id="c-val" data-i18n-ph="cal.c.valPh" placeholder="e.g. 60000"></div>
+      <div class="field"><label data-i18n="cal.c.reg">Region</label><select id="c-reg"><option value="1" selected data-i18n="cal.c.reg1">Peninsular Malaysia</option><option value="0.85" data-i18n="cal.c.reg2">East Malaysia</option></select></div>
     </div>
-    <button class="pill pill-dark" style="width:100%;justify-content:center" onclick="calcMotor()">Estimate contribution</button>
+    <button class="pill pill-dark" style="width:100%;justify-content:center" onclick="calcMotor()" data-i18n="cal.c.btn">Estimate contribution</button>
     <div class="result" id="c-res"></div>
   </div>
 
 </div>
-<p class="disc">These are simple estimates for guidance only — not a quote or a contract of takaful. Your actual plan and contribution depend on underwriting, age, health and the options you choose.</p>
+<p class="disc" data-i18n="cal.disc">These are simple estimates for guidance only — not a quote or a contract of takaful. Your actual plan and contribution depend on underwriting, age, health and the options you choose.</p>
 </div>
 
-<footer>© 2026 Hj. Asyraf Fauzi · Gemilang Empire ZFN — Website by Ummah Collective</footer>
+<footer>© 2026 Hj. Asyraf Fauzi · Gemilang Empire ZFN — <span data-i18n="ft.by">Website by Ummah Collective</span></footer>
 
 <script>
-var WA="6089003244";
+var WA="6089003244", RAN={};
 function rm(n){return "RM"+Math.round(n).toLocaleString("en-MY");}
-function wa(msg){return "https://wa.me/"+WA+"?text="+encodeURIComponent(msg);}
+function T(k){return (window.AF_t?window.AF_t(k):k);}
+function dec(s){return s.replace(/&amp;/g,"&");}
+function wa(msg){return "https://wa.me/"+WA+"?text="+encodeURIComponent(dec(msg));}
 function out(id,big,lbl,sub,waMsg){
   var el=document.getElementById(id);
   el.innerHTML='<div class="lbl">'+lbl+'</div><div class="big">'+big+'</div><div class="sub">'+sub+'</div>'+
-    '<div class="acts"><a class="pill pill-wa" target="_blank" rel="noopener" href="'+wa(waMsg)+'"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.06 24l1.68-6.16A11.87 11.87 0 0 1 .14 11.9C.14 5.34 5.5 0 12.08 0a11.82 11.82 0 0 1 8.42 3.49 11.79 11.79 0 0 1 3.48 8.42c0 6.56-5.36 11.9-11.94 11.9a12 12 0 0 1-5.72-1.46L.06 24z"/></svg>Discuss on WhatsApp</a>'+
-    '<a class="pill pill-dark" href="booking-rounded.html">Book a consultation</a></div>';
+    '<div class="acts"><a class="pill pill-wa" target="_blank" rel="noopener" href="'+wa(waMsg)+'"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.06 24l1.68-6.16A11.87 11.87 0 0 1 .14 11.9C.14 5.34 5.5 0 12.08 0a11.82 11.82 0 0 1 8.42 3.49 11.79 11.79 0 0 1 3.48 8.42c0 6.56-5.36 11.9-11.94 11.9a12 12 0 0 1-5.72-1.46L.06 24z"/></svg>'+T("cal.discuss")+'</a>'+
+    '<a class="pill pill-dark" href="booking-rounded.html">'+T("cal.book")+'</a></div>';
   el.classList.add("on");
 }
 function calcMed(){
+  RAN.med=calcMed;
   var age=+document.getElementById("m-age").value||34, h=+document.getElementById("m-hosp").value, f=+document.getElementById("m-fam").value;
   var base= age<30?1000000: age<46?1500000: 2000000;
   var rec=Math.min(2000000, Math.round(base*h/100000)*100000);
-  out("m-res", rm(rec)+" / year", "Suggested annual medical limit",
-    "With no lifetime cap and cashless panel admission, many start from just a few ringgit a day. Let's find the exact plan for you.",
-    "Assalamualaikum Hj. Asyraf, my medical estimate suggested "+rm(rec)+"/year cover. I'd like to discuss a plan.");
+  out("m-res", rm(rec)+T("cal.m.unit"), T("cal.m.lbl"), T("cal.m.sub"),
+    T("cal.m.wa").replace("{v}",rm(rec)));
 }
 function calcHibah(){
+  RAN.hibah=calcHibah;
   var exp=+document.getElementById("h-exp").value||0, yrs=+document.getElementById("h-yrs").value||10, debt=+document.getElementById("h-debt").value||0;
   var sum=exp*12*yrs+debt;
-  out("h-res", rm(sum), "Suggested protection (sum covered)",
-    "Replaces "+yrs+" years of income"+(debt?" and clears your debts":"")+" so your family stays secure. Hibah ensures it reaches them clearly.",
-    "Assalamualaikum Hj. Asyraf, my family-protection estimate was "+rm(sum)+". I'd like to plan hibah &amp; family takaful.");
+  var dclause=debt?T("cal.h.debtClause"):"";
+  out("h-res", rm(sum), T("cal.h.lbl"),
+    dec(T("cal.h.sub")).replace("{yrs}",yrs).replace("{debt}",dclause),
+    T("cal.h.wa").replace("{v}",rm(sum)));
 }
 function calcEdu(){
+  RAN.edu=calcEdu;
   var age=+document.getElementById("e-age").value, start=+document.getElementById("e-start").value||18, cost=+document.getElementById("e-cost").value||150000;
   var yrs=Math.max(1,start-(age||5)); var future=cost*Math.pow(1.05,yrs); var monthly=future/(yrs*12);
-  out("e-res", rm(monthly)+" / month", "To reach "+rm(future)+" in "+yrs+" years",
-    "Based on ~5%/yr education inflation. A Shariah-compliant savings plan can grow this while protecting your child's future.",
-    "Assalamualaikum Hj. Asyraf, my education estimate was about "+rm(monthly)+"/month. I'd like a savings plan.");
+  out("e-res", rm(monthly)+T("cal.e.unit"), T("cal.e.lbl").replace("{future}",rm(future)).replace("{yrs}",yrs), T("cal.e.sub"),
+    T("cal.e.wa").replace("{v}",rm(monthly)));
 }
 function calcMotor(){
+  RAN.motor=calcMotor;
   var val=+document.getElementById("c-val").value||0, reg=+document.getElementById("c-reg").value;
   var lo=val*0.0275*reg, hi=val*0.0375*reg;
-  out("c-res", rm(lo)+"–"+rm(hi)+" / year", "Estimated comprehensive contribution",
-    "Before NCD and add-ons (flood, PA, courtesy car). Z-Driver can also add personal accident up to RM175k/car. I'll get you an exact quote.",
-    "Assalamualaikum Hj. Asyraf, my car (value "+rm(val)+") motor estimate was "+rm(lo)+"–"+rm(hi)+"/year. I'd like an exact Z-Driver quote.");
+  out("c-res", rm(lo)+"–"+rm(hi)+T("cal.c.unit"), T("cal.c.lbl"), T("cal.c.sub"),
+    T("cal.c.wa").replace("{val}",rm(val)).replace("{lo}",rm(lo)).replace("{hi}",rm(hi)));
 }
+document.addEventListener("af:lang",function(){ Object.keys(RAN).forEach(function(k){RAN[k]();}); });
 </script>
 </body>
 </html>

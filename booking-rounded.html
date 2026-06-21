@@ -7,52 +7,64 @@
 <meta name="description" content="Schedule a free, no-obligation takaful consultation with Hj. Asyraf Fauzi.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Noto+Kufi+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --obsidian:#09090b; --ink:#18181b; --graphite:#3f3f46; --steel:#71717a; --ash:#a1a1aa;
-  --fog:#ececee; --mist:#f4f4f5; --snow:#ffffff; --leaf:#1f9d57;
+  --fog:#ececee; --mist:#f4f4f5; --snow:#ffffff; --leaf:#1f9d57; --pebble:#d4d4d8;
   --ff:"Plus Jakarta Sans",ui-sans-serif,system-ui,sans-serif;
   --btn-shadow:rgba(255,255,255,.5) 0 .5px 0 0 inset, rgba(117,123,133,.4) 0 9px 14px -5px inset, rgb(44,46,52) 0 0 0 1.5px, rgba(0,0,0,.14) 0 4px 6px 0;
   --r:36px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:var(--ff);background:var(--mist);color:var(--ink);line-height:1.56;-webkit-font-smoothing:antialiased}
+html[lang="ar"] body{font-family:"Noto Kufi Arabic",var(--ff)}
+html[dir="rtl"]{direction:rtl}
 a{text-decoration:none;color:inherit}
 .wrap{max-width:920px;margin:0 auto;padding:0 24px}
 h1,h2,h3{font-weight:700;letter-spacing:-.012em;color:var(--obsidian)}
 .muted{color:var(--steel)}
 .pill{display:inline-flex;align-items:center;gap:.5rem;border-radius:36px;font-size:.95rem;font-weight:500;padding:.8rem 1.4rem;cursor:pointer;border:0;transition:.22s cubic-bezier(.175,.885,.32,1.275)}
-.pill-dark{background:var(--obsidian);color:#fff;box-shadow:var(--btn-shadow)}.pill-dark:hover{transform:translateY(-2px)}
+.pill-dark{background:var(--obsidian);color:#fff;box-shadow:var(--btn-shadow)}.pill-dark:hover{transform:translateY(-2px) scale(1.02)}
 .pill-light{background:#fff;color:var(--graphite);border:1px solid var(--graphite)}.pill-light:hover{transform:translateY(-2px)}
-.pill-wa{background:#25D366;color:#04210f}.pill-wa:hover{transform:translateY(-2px)}
+.pill-wa{background:#25D366;color:#04210f}.pill-wa:hover{transform:translateY(-2px) scale(1.02)}
 .pill svg{width:17px;height:17px}.pill[disabled]{opacity:.4;cursor:not-allowed}
 
 nav{position:sticky;top:0;z-index:50;background:rgba(244,244,245,.82);backdrop-filter:blur(14px);height:62px;display:flex;align-items:center;border-bottom:1px solid var(--fog)}
 nav .wrap{display:flex;align-items:center;justify-content:space-between;max-width:1200px;width:100%}
 .brand{display:flex;align-items:center;gap:.55rem}.brand .mk{width:38px;height:38px}
 .brand b{font-size:1.04rem;font-weight:700}
+.navright{display:flex;align-items:center;gap:1rem}
 .back{font-size:.9rem;color:var(--steel);font-weight:500}.back:hover{color:var(--ink)}
+.lang{position:relative}
+.lang__btn{display:flex;align-items:center;gap:.35rem;border:1px solid var(--fog);background:#fff;border-radius:999px;padding:.4rem .7rem;font-family:var(--ff);font-weight:600;font-size:.8rem;color:var(--obsidian);cursor:pointer;transition:.18s}
+.lang__btn:hover{border-color:var(--pebble)}.lang__btn svg{width:14px;height:14px;color:var(--steel)}
+.lang__btn .chev{transition:.2s}.lang.open .lang__btn .chev{transform:rotate(180deg)}
+.lang__menu{position:absolute;top:calc(100% + 8px);inset-inline-end:0;min-width:164px;background:#fff;border:1px solid var(--fog);border-radius:16px;box-shadow:0 14px 34px rgba(9,9,11,.16);padding:.35rem;list-style:none;margin:0;display:none;z-index:90}
+.lang.open .lang__menu{display:block}
+.lang__menu button{width:100%;text-align:start;background:transparent;border:0;cursor:pointer;padding:.55rem .7rem;border-radius:10px;font-family:var(--ff);font-weight:600;font-size:.9rem;color:var(--graphite);transition:.15s}
+.lang__menu button:hover{background:var(--mist)}.lang__menu button.on{background:var(--obsidian);color:#fff}
 
-.head{text-align:center;padding:clamp(2.4rem,5vw,3.4rem) 0 1.4rem}
+.head{text-align:center;padding:clamp(2.4rem,5vw,3.4rem) 0 1.4rem;animation:fadeUp .6s both}
 .head .badge{display:inline-block;font-size:.74rem;font-weight:700;letter-spacing:.04em;color:var(--steel);background:#fff;border:1px solid var(--fog);border-radius:12px;padding:.34rem .7rem;margin-bottom:1rem}
 .head h1{font-size:clamp(2rem,4vw,2.8rem);margin-bottom:.4rem}
 .head p{color:var(--steel)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
 
-.wizard{background:#fff;border-radius:var(--r);overflow:hidden;margin-bottom:3rem;box-shadow:rgba(0,0,0,.04) 0 4px 18px}
+.wizard{background:#fff;border-radius:var(--r);overflow:hidden;margin-bottom:3rem;box-shadow:rgba(0,0,0,.06) 0 18px 50px;animation:fadeUp .7s .08s both}
 .bar{display:flex;background:var(--mist);border-bottom:1px solid var(--fog)}
 .wstep{flex:1;display:flex;align-items:center;justify-content:center;gap:.5rem;padding:1rem .8rem;font-size:.82rem;font-weight:600;color:var(--steel)}
-.wstep .num{width:26px;height:26px;border-radius:50%;background:#fff;border:1px solid var(--fog);display:grid;place-items:center;font-size:.78rem;flex:none;transition:.2s}
-.wstep.active{color:var(--obsidian)}.wstep.active .num{background:var(--obsidian);border-color:var(--obsidian);color:#fff}
+.wstep .num{width:26px;height:26px;border-radius:50%;background:#fff;border:1px solid var(--fog);display:grid;place-items:center;font-size:.78rem;flex:none;transition:.25s}
+.wstep.active{color:var(--obsidian)}.wstep.active .num{background:var(--obsidian);border-color:var(--obsidian);color:#fff;transform:scale(1.12)}
 .wstep.done .num{background:var(--leaf);border-color:var(--leaf);color:#fff}
 .body{padding:clamp(1.6rem,3vw,2.4rem)}
-.pane{animation:fade .35s ease}@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.pane{animation:fade .4s ease}@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 .pane h3{font-size:1.3rem;margin-bottom:.25rem}.pane .sub{color:var(--steel);margin-bottom:1.4rem}
 .opts{display:grid;grid-template-columns:repeat(2,1fr);gap:.9rem}
 .opt{display:flex;gap:.85rem;align-items:flex-start;padding:1.05rem;border:1.5px solid var(--fog);border-radius:20px;cursor:pointer;transition:.18s;background:#fff}
-.opt:hover{border-color:var(--pebble,#d4d4d8);background:var(--mist)}
+.opt:hover{border-color:var(--pebble);background:var(--mist);transform:translateY(-2px)}
 .opt.sel{border-color:var(--obsidian);background:var(--mist)}
-.opt .ic{width:42px;height:42px;border-radius:13px;background:var(--mist);display:grid;place-items:center;color:var(--obsidian);flex:none}
+.opt .ic{width:42px;height:42px;border-radius:13px;background:var(--mist);display:grid;place-items:center;color:var(--obsidian);flex:none;transition:.2s}
 .opt.sel .ic{background:var(--obsidian);color:#fff}.opt .ic svg{width:21px;height:21px}
 .opt b{font-size:.97rem;display:block;line-height:1.2}.opt span{font-size:.82rem;color:var(--steel)}
 .field{margin-bottom:1rem}
@@ -62,12 +74,13 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;max-widt
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
 .chips{display:flex;flex-wrap:wrap;gap:.6rem}
 .tchip{padding:.6rem 1.1rem;border:1.5px solid var(--fog);border-radius:999px;cursor:pointer;font-weight:600;font-size:.9rem;color:var(--graphite);background:#fff;transition:.18s}
-.tchip:hover{border-color:#d4d4d8}.tchip.sel{background:var(--obsidian);border-color:var(--obsidian);color:#fff}
+.tchip:hover{border-color:var(--pebble)}.tchip.sel{background:var(--obsidian);border-color:var(--obsidian);color:#fff}
 .foot{display:flex;justify-content:space-between;gap:1rem;padding:1.2rem clamp(1.6rem,3vw,2.4rem);border-top:1px solid var(--fog);background:var(--mist)}
-.summary{background:var(--mist);border:1px dashed #d4d4d8;border-radius:20px;padding:1.1rem 1.3rem;margin-bottom:1.3rem}
+.summary{background:var(--mist);border:1px dashed var(--pebble);border-radius:20px;padding:1.1rem 1.3rem;margin-bottom:1.3rem}
 .sr{display:flex;justify-content:space-between;gap:1rem;padding:.35rem 0;font-size:.92rem}.sr span{color:var(--steel)}.sr b{font-weight:600}
 .confirm{text-align:center;padding:1rem 0}
-.confirm .ok{width:74px;height:74px;border-radius:50%;background:rgba(31,157,87,.12);color:var(--leaf);display:grid;place-items:center;margin:0 auto 1.1rem}
+.confirm .ok{width:74px;height:74px;border-radius:50%;background:rgba(31,157,87,.12);color:var(--leaf);display:grid;place-items:center;margin:0 auto 1.1rem;animation:pop .5s cubic-bezier(.175,.885,.32,1.4) both}
+@keyframes pop{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}
 .confirm .ok svg{width:38px;height:38px}
 .mailcard{max-width:440px;margin:1.4rem auto 0;border:1px solid var(--fog);border-radius:20px;text-align:start;overflow:hidden}
 .mailcard .mh{background:var(--mist);padding:.7rem 1rem;font-size:.8rem;color:var(--steel);border-bottom:1px solid var(--fog)}
@@ -75,61 +88,74 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;max-widt
 .note{font-size:.8rem;color:var(--steel);margin-top:1.1rem;text-align:center}
 .err{color:#c0392b;font-size:.85rem;margin-top:.6rem}
 footer{padding:2rem 0 1.6rem;font-size:.78rem;color:var(--steel);text-align:center}
-@media(max-width:560px){.opts,.grid2{grid-template-columns:1fr}.wstep span{display:none}}
+@media(max-width:560px){.opts,.grid2{grid-template-columns:1fr}.wstep span:not(.num){display:none}}
 </style>
   <script src="gate.js"></script>
+  <script src="assets/js/i18n.js"></script>
 </head>
 <body>
 
 <nav>
   <div class="wrap">
     <a class="brand" href="index.html"><svg class="mk" viewBox="0 0 38 38"><rect width="38" height="38" rx="11" fill="#09090b"/><path d="M12 26c0-7 3-10 7-11 4 1 7 4 7 11" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/><circle cx="19" cy="11.5" r="1.4" fill="#fff"/></svg><b>Hj. Asyraf Fauzi</b></a>
-    <a class="back" href="index.html">← Back to site</a>
+    <div class="navright">
+      <div class="lang">
+        <button type="button" class="lang__btn" aria-haspopup="listbox"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20"/></svg><span class="lang__cur">EN</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
+        <ul class="lang__menu" role="listbox">
+          <li><button data-lang="en">English</button></li>
+          <li><button data-lang="bm">Bahasa Melayu</button></li>
+          <li><button data-lang="zh">中文 (Mandarin)</button></li>
+          <li><button data-lang="ta">தமிழ் (Tamil)</button></li>
+          <li><button data-lang="ar">العربية</button></li>
+        </ul>
+      </div>
+      <a class="back" href="index.html"><span aria-hidden="true">←</span> <span data-i18n="nav.back">Back to site</span></a>
+    </div>
   </div>
 </nav>
 
 <div class="head">
-  <span class="badge">BOOK A MEETING</span>
-  <h1>Schedule your free consultation</h1>
-  <p class="muted">Four quick steps. Meet in person across KL &amp; the East Coast, or online.</p>
+  <span class="badge" data-i18n="bk.badge">BOOK A MEETING</span>
+  <h1 data-i18n="bk.h1">Schedule your free consultation</h1>
+  <p class="muted" data-i18n="bk.sub">Four quick steps. Meet in person across KL &amp; the East Coast, or online.</p>
 </div>
 
 <div class="wrap">
   <div class="wizard">
     <div class="bar">
-      <div class="wstep active"><span class="num">1</span><span>Service</span></div>
-      <div class="wstep"><span class="num">2</span><span>Meeting</span></div>
-      <div class="wstep"><span class="num">3</span><span>Date &amp; time</span></div>
-      <div class="wstep"><span class="num">4</span><span>Details</span></div>
-      <div class="wstep"><span class="num">✓</span><span>Done</span></div>
+      <div class="wstep active"><span class="num">1</span><span data-i18n="bk.s1">Service</span></div>
+      <div class="wstep"><span class="num">2</span><span data-i18n="bk.s2">Meeting</span></div>
+      <div class="wstep"><span class="num">3</span><span data-i18n="bk.s3">Date &amp; time</span></div>
+      <div class="wstep"><span class="num">4</span><span data-i18n="bk.s4">Details</span></div>
+      <div class="wstep"><span class="num">✓</span><span data-i18n="bk.s5">Done</span></div>
     </div>
     <div class="body">
       <!-- STEP 0 -->
       <div class="pane" data-step="0">
-        <h3>What would you like to discuss?</h3><p class="sub">Pick the area you're most interested in.</p>
+        <h3 data-i18n="bk.q0">What would you like to discuss?</h3><p class="sub" data-i18n="bk.q0sub">Pick the area you're most interested in.</p>
         <div class="opts">
-          <div class="opt" data-group="svc" data-val="Medical Takaful"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2 5 4-10 2 5h6"/></svg></span><span><b>Medical Takaful</b><span>Hospital &amp; surgical cover</span></span></div>
-          <div class="opt" data-group="svc" data-val="Hibah & Family"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg></span><span><b>Hibah &amp; Family</b><span>Legacy &amp; protection</span></span></div>
-          <div class="opt" data-group="svc" data-val="Savings & Investment"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 6l-9.5 9.5-5-5L1 18"/><path d="M17 6h6v6"/></svg></span><span><b>Savings &amp; Investment</b><span>Grow &amp; protect savings</span></span></div>
-          <div class="opt" data-group="svc" data-val="Accident & Motor"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14l-1.5-5a3 3 0 0 0-2.8-2H9.3a3 3 0 0 0-2.8 2L5 17z"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/></svg></span><span><b>Accident &amp; Motor</b><span>Accident &amp; vehicle cover</span></span></div>
-          <div class="opt" data-group="svc" data-val="Not sure yet" style="grid-column:1/-1"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></span><span><b>Not sure yet</b><span>Help me figure out what I need</span></span></div>
+          <div class="opt" data-group="svc" data-val="Medical Takaful"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2 5 4-10 2 5h6"/></svg></span><span><b data-i18n="bk.svc.med">Medical Takaful</b><span data-i18n="bk.svc.medD">Hospital &amp; surgical cover</span></span></div>
+          <div class="opt" data-group="svc" data-val="Hibah & Family"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg></span><span><b data-i18n="bk.svc.fam">Hibah &amp; Family</b><span data-i18n="bk.svc.famD">Legacy &amp; protection</span></span></div>
+          <div class="opt" data-group="svc" data-val="Savings & Investment"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 6l-9.5 9.5-5-5L1 18"/><path d="M17 6h6v6"/></svg></span><span><b data-i18n="bk.svc.inv">Savings &amp; Investment</b><span data-i18n="bk.svc.invD">Grow &amp; protect savings</span></span></div>
+          <div class="opt" data-group="svc" data-val="Accident & Motor"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14l-1.5-5a3 3 0 0 0-2.8-2H9.3a3 3 0 0 0-2.8 2L5 17z"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/></svg></span><span><b data-i18n="bk.svc.acc">Accident &amp; Motor</b><span data-i18n="bk.svc.accD">Accident &amp; vehicle cover</span></span></div>
+          <div class="opt" data-group="svc" data-val="Not sure yet" style="grid-column:1/-1"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></span><span><b data-i18n="bk.svc.unsure">Not sure yet</b><span data-i18n="bk.svc.unsureD">Help me figure out what I need</span></span></div>
         </div>
       </div>
       <!-- STEP 1 -->
       <div class="pane" data-step="1" hidden>
-        <h3>How would you like to meet?</h3><p class="sub">Choose the most convenient option.</p>
+        <h3 data-i18n="bk.q1">How would you like to meet?</h3><p class="sub" data-i18n="bk.q1sub">Choose the most convenient option.</p>
         <div class="opts">
-          <div class="opt" data-group="loc" data-val="In person — Kuala Lumpur"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M6 21V7l6-4 6 4v14"/></svg></span><span><b>In person — KL</b><span>Café or your office in KL</span></span></div>
-          <div class="opt" data-group="loc" data-val="In person — East Coast"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span><b>In person — East Coast</b><span>Pahang · Terengganu · Kelantan</span></span></div>
-          <div class="opt" data-group="loc" data-val="Video call"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m23 7-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></span><span><b>Video call</b><span>Google Meet or Zoom</span></span></div>
-          <div class="opt" data-group="loc" data-val="WhatsApp call"><span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.06 24l1.68-6.16A11.87 11.87 0 0 1 .14 11.9C.14 5.34 5.5 0 12.08 0a11.82 11.82 0 0 1 8.42 3.49 11.79 11.79 0 0 1 3.48 8.42c0 6.56-5.36 11.9-11.94 11.9a12 12 0 0 1-5.72-1.46L.06 24z"/></svg></span><span><b>WhatsApp call</b><span>Quick &amp; convenient</span></span></div>
+          <div class="opt" data-group="loc" data-val="In person — Kuala Lumpur"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M6 21V7l6-4 6 4v14"/></svg></span><span><b data-i18n="bk.loc.kl">In person — KL</b><span data-i18n="bk.loc.klD">Café or your office in KL</span></span></div>
+          <div class="opt" data-group="loc" data-val="In person — East Coast"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span><b data-i18n="bk.loc.ec">In person — East Coast</b><span data-i18n="bk.loc.ecD">Pahang · Terengganu · Kelantan</span></span></div>
+          <div class="opt" data-group="loc" data-val="Video call"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m23 7-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></span><span><b data-i18n="bk.loc.video">Video call</b><span data-i18n="bk.loc.videoD">Google Meet or Zoom</span></span></div>
+          <div class="opt" data-group="loc" data-val="WhatsApp call"><span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.06 24l1.68-6.16A11.87 11.87 0 0 1 .14 11.9C.14 5.34 5.5 0 12.08 0a11.82 11.82 0 0 1 8.42 3.49 11.79 11.79 0 0 1 3.48 8.42c0 6.56-5.36 11.9-11.94 11.9a12 12 0 0 1-5.72-1.46L.06 24z"/></svg></span><span><b data-i18n="bk.loc.wa">WhatsApp call</b><span data-i18n="bk.loc.waD">Quick &amp; convenient</span></span></div>
         </div>
       </div>
       <!-- STEP 2 -->
       <div class="pane" data-step="2" hidden>
-        <h3>Pick a date &amp; time</h3><p class="sub">Select your preferred slot — I'll confirm availability.</p>
-        <div class="field" style="max-width:320px"><label>Preferred date</label><input type="date" id="bk-date"></div>
-        <div class="field"><label>Preferred time</label>
+        <h3 data-i18n="bk.q2">Pick a date &amp; time</h3><p class="sub" data-i18n="bk.q2sub">Select your preferred slot — I'll confirm availability.</p>
+        <div class="field" style="max-width:320px"><label data-i18n="bk.date">Preferred date</label><input type="date" id="bk-date"></div>
+        <div class="field"><label data-i18n="bk.time">Preferred time</label>
           <div class="chips">
             <button type="button" class="tchip" data-time="09:00">09:00</button>
             <button type="button" class="tchip" data-time="10:30">10:30</button>
@@ -144,57 +170,59 @@ footer{padding:2rem 0 1.6rem;font-size:.78rem;color:var(--steel);text-align:cent
       </div>
       <!-- STEP 3 -->
       <div class="pane" data-step="3" hidden>
-        <h3>Your details</h3><p class="sub">So I can confirm your appointment and send a reminder.</p>
+        <h3 data-i18n="bk.q3">Your details</h3><p class="sub" data-i18n="bk.q3sub">So I can confirm your appointment and send a reminder.</p>
         <div class="grid2">
-          <div class="field"><label>Full name</label><input type="text" id="bk-name" placeholder="e.g. Ahmad bin Ismail"></div>
-          <div class="field"><label>Phone number</label><input type="tel" id="bk-phone" placeholder="e.g. 012-345 6789"></div>
+          <div class="field"><label data-i18n="bk.name">Full name</label><input type="text" id="bk-name" data-i18n-ph="bk.namePh" placeholder="e.g. Ahmad bin Ismail"></div>
+          <div class="field"><label data-i18n="bk.phone">Phone number</label><input type="tel" id="bk-phone" data-i18n-ph="bk.phonePh" placeholder="e.g. 012-345 6789"></div>
         </div>
-        <div class="field"><label>Email</label><input type="email" id="bk-email" placeholder="you@email.com"></div>
+        <div class="field"><label data-i18n="bk.email">Email</label><input type="email" id="bk-email" data-i18n-ph="bk.emailPh" placeholder="you@email.com"></div>
       </div>
       <!-- STEP 4 -->
       <div class="pane" data-step="4" hidden>
         <div class="confirm">
           <div class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
-          <h3>Booking received!</h3>
-          <p class="sub" style="max-width:34em;margin-inline:auto">Thank you — your consultation request has been sent. A confirmation email is on its way and Hj. Asyraf will reach out to finalise the details.</p>
+          <h3 data-i18n="bk.done">Booking received!</h3>
+          <p class="sub" style="max-width:34em;margin-inline:auto" data-i18n="bk.doneP">Thank you — your consultation request has been sent. A confirmation email is on its way and Hj. Asyraf will reach out to finalise the details.</p>
           <div class="summary" style="max-width:440px;margin-inline:auto;text-align:start">
-            <div style="font-weight:700;margin-bottom:.5rem">Booking summary</div>
+            <div style="font-weight:700;margin-bottom:.5rem" data-i18n="bk.summaryT">Booking summary</div>
             <div id="bk-summary"></div>
           </div>
           <div class="mailcard">
-            <div class="mh">Confirmation email preview</div>
-            <div class="mb"><b>Subject: Your consultation with Hj. Asyraf Fauzi</b><p>Assalamualaikum, thank you for booking a consultation. Here are your details — I'll be in touch shortly to confirm.</p><p style="margin-top:.5rem;font-size:.82rem;color:var(--steel)">→ <span id="bk-mailto"></span></p></div>
+            <div class="mh" data-i18n="bk.mailH">Confirmation email preview</div>
+            <div class="mb"><b data-i18n="bk.mailSubj">Subject: Your consultation with Hj. Asyraf Fauzi</b><p data-i18n="bk.mailBody">Assalamualaikum, thank you for booking a consultation. Here are your details — I'll be in touch shortly to confirm.</p><p style="margin-top:.5rem;font-size:.82rem;color:var(--steel)">→ <span id="bk-mailto"></span></p></div>
           </div>
           <div style="display:flex;justify-content:center;gap:.7rem;margin-top:1.6rem;flex-wrap:wrap">
-            <button class="pill pill-light js-again">Make another booking</button>
-            <a class="pill pill-wa" href="https://wa.me/6089003244" target="_blank" rel="noopener">Message me on WhatsApp</a>
+            <button class="pill pill-light js-again" data-i18n="bk.again">Make another booking</button>
+            <a class="pill pill-wa js-wa" href="https://wa.me/6089003244" target="_blank" rel="noopener" data-i18n="bk.waBtn">Message me on WhatsApp</a>
           </div>
-          <p class="note">Design preview — on go-live this connects to automated email &amp; WhatsApp confirmation.</p>
+          <p class="note" data-i18n="bk.note">Design preview — on go-live this connects to automated email &amp; WhatsApp confirmation.</p>
         </div>
       </div>
-      <div class="err" id="bk-err" hidden>Please choose an option to continue.</div>
+      <div class="err" id="bk-err" hidden data-i18n="bk.err">Please choose an option to continue.</div>
     </div>
     <div class="foot">
-      <button class="pill pill-light js-back" style="visibility:hidden">Back</button>
-      <button class="pill pill-dark js-next">Continue</button>
+      <button class="pill pill-light js-back" style="visibility:hidden" data-i18n="bk.backBtn">Back</button>
+      <button class="pill pill-dark js-next" data-i18n="bk.continue">Continue</button>
     </div>
   </div>
 </div>
 
-<footer>© 2026 Hj. Asyraf Fauzi · Gemilang Empire ZFN — Website by Ummah Collective</footer>
+<footer>© 2026 Hj. Asyraf Fauzi · Gemilang Empire ZFN — <span data-i18n="ft.by">Website by Ummah Collective</span></footer>
 
 <script>
 (function(){
   var step=0, EMAIL="maf.zurichtakaful@gmail.com";
-  var st={svc:null,loc:null,date:"",time:"",name:"",phone:"",email:""};
+  var st={svc:null,svcKey:null,loc:null,locKey:null,date:"",time:"",name:"",phone:"",email:""};
   var $=function(s){return document.querySelector(s)}, $$=function(s){return [].slice.call(document.querySelectorAll(s))};
+  function T(k){return (window.AF_t?window.AF_t(k):k);}
+  function setNext(){ $('.js-next').textContent = (step===3)?T('bk.confirm'):T('bk.continue'); }
   function show(n){
     step=n;
     $$('.pane').forEach(function(p){p.hidden=(+p.getAttribute('data-step')!==n)});
     $$('.bar .wstep').forEach(function(s,i){s.classList.toggle('active',i===n);s.classList.toggle('done',i<n)});
     $('.js-back').style.visibility=(n===0||n===4)?'hidden':'visible';
     $('.js-next').hidden=(n===4);
-    $('.js-next').textContent=(n===3)?'Confirm booking':'Continue';
+    setNext();
     $('.foot').hidden=(n===4);
     $('#bk-err').hidden=true;
   }
@@ -207,7 +235,8 @@ footer{padding:2rem 0 1.6rem;font-size:.78rem;color:var(--steel);text-align:cent
   $$('.opt').forEach(function(o){o.addEventListener('click',function(){
     var g=o.getAttribute('data-group');
     $$('.opt[data-group="'+g+'"]').forEach(function(x){x.classList.remove('sel')});
-    o.classList.add('sel'); st[g]=o.getAttribute('data-val'); $('#bk-err').hidden=true;
+    o.classList.add('sel'); st[g]=o.getAttribute('data-val');
+    st[g+'Key']=o.querySelector('b').getAttribute('data-i18n'); $('#bk-err').hidden=true;
   })});
   $$('.tchip').forEach(function(c){c.addEventListener('click',function(){
     $$('.tchip').forEach(function(x){x.classList.remove('sel')}); c.classList.add('sel'); st.time=c.getAttribute('data-time');
@@ -215,7 +244,7 @@ footer{padding:2rem 0 1.6rem;font-size:.78rem;color:var(--steel);text-align:cent
   var dt=$('#bk-date'); if(dt){var t=new Date();t.setDate(t.getDate()+1);dt.min=t.toISOString().split('T')[0];dt.addEventListener('change',function(){st.date=dt.value})}
   function render(){
     st.name=$('#bk-name').value.trim();st.phone=$('#bk-phone').value.trim();st.email=$('#bk-email').value.trim();
-    var rows=[['Service',st.svc||'—'],['Meeting',st.loc||'—'],['Date & time',(st.date||'—')+(st.time?' · '+st.time:'')],['Name',st.name||'—'],['Phone',st.phone||'—']];
+    var rows=[[T('bk.rService'),(st.svcKey?T(st.svcKey):'—')],[T('bk.rMeeting'),(st.locKey?T(st.locKey):'—')],[T('bk.rDateTime'),(st.date||'—')+(st.time?' · '+st.time:'')],[T('bk.rName'),st.name||'—'],[T('bk.rPhone'),st.phone||'—']];
     $('#bk-summary').innerHTML=rows.map(function(r){return '<div class="sr"><span>'+r[0]+'</span><b>'+r[1]+'</b></div>'}).join('');
     $('#bk-mailto').textContent=st.email||EMAIL;
   }
@@ -225,11 +254,12 @@ footer{padding:2rem 0 1.6rem;font-size:.78rem;color:var(--steel);text-align:cent
   });
   $('.js-back').addEventListener('click',function(){if(step>0)show(step-1)});
   $('.js-again').addEventListener('click',function(){
-    st={svc:null,loc:null,date:"",time:"",name:"",phone:"",email:""};
+    st={svc:null,svcKey:null,loc:null,locKey:null,date:"",time:"",name:"",phone:"",email:""};
     $$('.opt.sel,.tchip.sel').forEach(function(x){x.classList.remove('sel')});
     ['#bk-name','#bk-phone','#bk-email','#bk-date'].forEach(function(id){var e=$(id);if(e)e.value=''});
     show(0);
   });
+  document.addEventListener('af:lang',function(){ setNext(); if(step===4)render(); });
   show(0);
 })();
 </script>
