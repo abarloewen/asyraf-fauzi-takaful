@@ -174,6 +174,17 @@ body.nav-open .navtoggle .l3{transform:translateY(-6px) rotate(-45deg)}
 .ctacard::after{content:"";position:absolute;left:-60px;bottom:-60px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(91,140,255,.18),transparent 70%)}
 .ctacard h3{color:#fff;font-size:1.8rem;margin-bottom:.4rem;position:relative}.ctacard p{color:var(--ash);margin-bottom:1.3rem;position:relative}
 .ctacard .btnrow{position:relative}.ctacard .pill-dark{background:#fff;color:var(--obsidian);box-shadow:none}
+.ctaform{background:#fff;border-radius:var(--r);padding:2.2rem;display:flex;flex-direction:column;gap:.7rem}
+.ctaform h3{font-size:1.6rem}
+.ctaform p{color:var(--steel);font-size:.92rem;margin-bottom:.4rem}
+.ctaform input,.ctaform textarea{width:100%;padding:.85rem 1rem;border:1.5px solid var(--fog);border-radius:14px;font-family:var(--ff);font-size:.95rem;background:var(--mist);color:var(--ink)}
+.ctaform input:focus,.ctaform textarea:focus{outline:0;border-color:var(--obsidian);background:#fff}
+.ctaform textarea{min-height:104px;resize:vertical}
+.ctaform .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none}
+.ctaform button{justify-content:center;margin-top:.3rem;width:100%}
+.formok,.formerr{border-radius:14px;padding:.8rem 1rem;font-size:.9rem;font-weight:600}
+.formok{background:rgba(31,157,87,.12);color:#137a42}
+.formerr{background:rgba(192,57,43,.1);color:#c0392b}
 
 footer{padding:2.4rem 0 1.6rem;font-size:.86rem;color:var(--steel)}
 footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
@@ -403,15 +414,23 @@ html[dir="rtl"] .marquee{direction:ltr}
       <div class="cline"><b data-i18n="ct.l2">Email</b><span>maf.zurichtakaful@gmail.com</span></div>
       <div class="cline"><b data-i18n="ct.l3">Service area</b><span data-i18n="ct.l3v">KL &amp; East Coast</span></div>
       <div class="cline"><b data-i18n="ct.l4">Availability</b><span data-i18n="ct.l4v">Mon–Sat, 9am–9pm</span></div>
-    </div>
-    <div class="ctacard reveal">
-      <h3 data-i18n="ct.ctah">Ready when you are</h3>
-      <p data-i18n="ct.ctap">Book a free, no-obligation consultation — in person across KL &amp; the East Coast, or online.</p>
-      <div class="btnrow" style="justify-content:center">
+      <div class="btnrow" style="margin-top:1.3rem">
         <a class="pill pill-dark" href="booking-rounded.html" data-i18n="ct.cta1">Book a consultation</a>
         <a class="pill pill-wa js-wa" href="https://wa.me/60189003244" target="_blank" rel="noopener" data-i18n="ct.cta2">WhatsApp me</a>
       </div>
     </div>
+    <form class="ctaform reveal" id="contactForm" novalidate>
+      <h3 data-i18n="ct.formH">Send a message</h3>
+      <p data-i18n="ct.formP">Tell me what you need and I'll reply personally.</p>
+      <input type="hidden" name="type" value="contact">
+      <input class="hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <input type="text" name="name" required data-i18n-ph="ct.fname" placeholder="Your name">
+      <input type="email" name="email" required data-i18n-ph="ct.femail" placeholder="Email address">
+      <textarea name="message" required data-i18n-ph="ct.fmsg" placeholder="How can I help?"></textarea>
+      <button type="submit" class="pill pill-dark" data-i18n="ct.fsend">Send message</button>
+      <div class="formok" hidden data-i18n="ct.fsent">Thank you — your message has been sent. I'll be in touch soon.</div>
+      <div class="formerr" hidden data-i18n="ct.ferr">Couldn't send right now — please WhatsApp me instead.</div>
+    </form>
   </div>
 </section>
 
@@ -423,5 +442,21 @@ html[dir="rtl"] .marquee{direction:ltr}
 <a class="fab js-wa" href="https://wa.me/60189003244" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.06 24l1.68-6.16A11.87 11.87 0 0 1 .14 11.9C.14 5.34 5.5 0 12.08 0a11.82 11.82 0 0 1 8.42 3.49 11.79 11.79 0 0 1 3.48 8.42c0 6.56-5.36 11.9-11.94 11.9a12 12 0 0 1-5.72-1.46L.06 24zM6.6 20.13c1.7.99 3.32 1.58 5.47 1.58 5.45 0 9.9-4.43 9.9-9.88a9.82 9.82 0 0 0-9.88-9.88c-5.46 0-9.9 4.43-9.9 9.88a9.8 9.8 0 0 0 1.51 5.26l-.99 3.61 3.89-1.59z"/></svg></a>
 <script src="assets/js/i18n.js"></script>
 <script src="assets/js/anim.js"></script>
+<script>
+(function(){
+  var f=document.getElementById('contactForm'); if(!f)return;
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var ok=f.querySelector('.formok'), er=f.querySelector('.formerr'), btn=f.querySelector('button[type=submit]');
+    ok.hidden=true; er.hidden=true;
+    if(!f.name.value.trim()||!f.email.value.trim()||!f.message.value.trim()){er.hidden=false;return;}
+    btn.disabled=true;
+    var fd=new FormData(f); fd.append('lang',window.AF_LANG||'');
+    fetch('send.php',{method:'POST',body:fd}).then(function(r){return r.json();}).then(function(j){
+      if(j&&j.ok){ f.reset(); ok.hidden=false; } else { er.hidden=false; }
+    }).catch(function(){ er.hidden=false; }).then(function(){ btn.disabled=false; });
+  });
+})();
+</script>
 </body>
 </html>

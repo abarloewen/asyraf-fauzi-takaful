@@ -248,9 +248,18 @@ footer{padding:2rem 0 1.6rem;font-size:.78rem;color:var(--steel);text-align:cent
     $('#bk-summary').innerHTML=rows.map(function(r){return '<div class="sr"><span>'+r[0]+'</span><b>'+r[1]+'</b></div>'}).join('');
     $('#bk-mailto').textContent=st.email||EMAIL;
   }
+  function submitBooking(){
+    var fd=new FormData();
+    fd.append('type','booking');
+    fd.append('name',st.name); fd.append('phone',st.phone); fd.append('email',st.email);
+    fd.append('service',st.svc||''); fd.append('meeting',st.loc||'');
+    fd.append('date',st.date||''); fd.append('time',st.time||''); fd.append('lang',window.AF_LANG||'');
+    // Best-effort: emails the booking on a PHP host (Hostinger). Confirmation shows regardless.
+    try{ fetch('send.php',{method:'POST',body:fd}).catch(function(){}); }catch(e){}
+  }
   $('.js-next').addEventListener('click',function(){
     if(!valid(step)){$('#bk-err').hidden=false;return}
-    if(step===3){render();show(4);return} show(step+1);
+    if(step===3){render();submitBooking();show(4);return} show(step+1);
   });
   $('.js-back').addEventListener('click',function(){if(step>0)show(step-1)});
   $('.js-again').addEventListener('click',function(){
